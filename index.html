@@ -2375,45 +2375,60 @@ const dicInput = document.getElementById('dic-input');
 const dicConsultar = document.getElementById('dic-consultar');
 const dicRespuesta = document.getElementById('dic-respuesta');
 
+// Abrir modal
 dicFab.addEventListener('click', () => {
   dicModal.classList.add('open');
   dicInput.value = '';
   dicRespuesta.className = 'dic-respuesta';
+  dicRespuesta.innerHTML = '';
   setTimeout(() => dicInput.focus(), 100);
 });
+
+// Cerrar modal
 function closeDic() { dicModal.classList.remove('open'); }
 dicClose.addEventListener('click', closeDic);
 dicModal.addEventListener('click', e => { if (e.target === dicModal) closeDic(); });
 
+// ─────────────────────────────────────────────
+// FUNCIÓN PRINCIPAL: CONSULTAR TU API DE GROQ
+// ─────────────────────────────────────────────
 async function consultar() {
   const texto = dicInput.value.trim();
   if (!texto) return;
+
   dicRespuesta.className = 'dic-respuesta visible';
   dicRespuesta.textContent = 'Patxi está buscando…';
 
-  // ── Conecta aquí tu API de Groq ──────────────────
-  // const res = await fetch('https://api.groq.com/v1/chat/completions', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type':'application/json', 'Authorization':'Bearer TU_KEY' },
-  //   body: JSON.stringify({
-  //     model: 'llama3-8b-8192',
-  //     messages: [
-  //       { role:'system', content:'Eres un diccionario de euskera nivel A1–A2 llamado Patxi. Explica palabras y expresiones en máx 3 líneas con un ejemplo. No corriges ejercicios ni das gramática extensa.' },
-  //       { role:'user', content: texto }
-  //     ]
-  //   })
-  // });
-  // const data = await res.json();
-  // dicRespuesta.textContent = data.choices[0].message.content;
+  try {
+    // Llamada a TU API Cloudflare Worker
+    const res = await fetch(
+      "https://grokapi.joniturbu.workers.dev/?q=" + encodeURIComponent(texto)
+    );
 
-  // Simulación:
-  setTimeout(() => {
-    dicRespuesta.textContent = `"${texto}" → Aquí aparecerá la explicación de Patxi una vez conectes la API de Groq.`;
-  }, 600);
+    const data = await res.json();
+
+    // Si la API devuelve error
+    if (data.error) {
+      dicRespuesta.innerHTML = `<p>No encontrado.</p>`;
+      return;
+    }
+
+    // Mostrar resultado
+    dicRespuesta.innerHTML = `
+      <h3>${data.palabra}</h3>
+      <p><strong>ES:</strong> ${data.es}</p>
+      <p><strong>EUS:</strong> ${data.eu}</p>
+    `;
+
+  } catch (err) {
+    dicRespuesta.innerHTML = `<p>Error al conectar con la API.</p>`;
+  }
 }
 
+// Eventos
 dicConsultar.addEventListener('click', consultar);
 dicInput.addEventListener('keydown', e => { if (e.key === 'Enter') consultar(); });
 </script>
 </body>
 </html>
+
