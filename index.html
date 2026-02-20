@@ -2220,7 +2220,6 @@ setTimeout(mostrarFrase, 1500);
 <div id="patxi-bubble"></div>
 
 <script>
-
 // ── FRASES DE PATXI ──────────────────────────────
 const frases = [
   "¡Kaixo! Soy Patxi, tu guía vasco. 🧢",
@@ -2232,9 +2231,10 @@ const frases = [
   "Kaixo = hola · Agur = adiós. ¡Lo más básico!",
   "Ni nago = estoy (yo). Ni naiz = soy (yo). ¡Fácil!",
 ];
+
 let fraseIdx = 0;
-const bubble = document.getElementById('hamish-bubble');
-const hamishSvg = document.getElementById('hamish-svg');
+const bubble = document.getElementById('patxi-bubble');
+const patxiFab = document.getElementById('fab-patxi');
 
 function mostrarFrase() {
   bubble.textContent = frases[fraseIdx % frases.length];
@@ -2243,9 +2243,12 @@ function mostrarFrase() {
   setTimeout(() => bubble.classList.remove('visible'), 4000);
 }
 
-hamishSvg.addEventListener('click', mostrarFrase);
+// Patxi habla al pulsar el FAB
+patxiFab.addEventListener('click', mostrarFrase);
+
 // Saludo inicial
 setTimeout(mostrarFrase, 1500);
+
 
 // ── ESTADO ────────────────────────────────────────
 const completedModules = new Set(
@@ -2339,7 +2342,7 @@ document.querySelectorAll('.modulo').forEach(modulo => {
                 <div class="big-emoji">🎉</div>
                 <h3>¡Oso ondo! Módulo amaituta.</h3>
                 <p>Has completado todos los ejercicios de este módulo.</p>
-                <button class="btn-volver-complete" onclick="document.querySelectorAll('[data-volver]').forEach(b=>b.closest('.modulo')===this.closest('.modulo')&&b.click())">Volver al menú</button>
+                <button class="btn-volver-complete">Volver al menú</button>
               </div>`;
               wrap.querySelector('.btn-volver-complete').addEventListener('click', () => {
                 allModulos.forEach(m => m.style.display = 'none');
@@ -2367,7 +2370,7 @@ document.querySelectorAll('.modulo').forEach(modulo => {
   });
 });
 
-// ── DICCIONARIO ───────────────────────────────────
+// ── DICCIONARIO (API GROQ) ────────────────────────
 const dicFab = document.getElementById('dic-fab');
 const dicModal = document.getElementById('dic-modal');
 const dicClose = document.getElementById('dic-close');
@@ -2389,9 +2392,7 @@ function closeDic() { dicModal.classList.remove('open'); }
 dicClose.addEventListener('click', closeDic);
 dicModal.addEventListener('click', e => { if (e.target === dicModal) closeDic(); });
 
-// ─────────────────────────────────────────────
-// FUNCIÓN PRINCIPAL: CONSULTAR TU API DE GROQ
-// ─────────────────────────────────────────────
+// Consultar API
 async function consultar() {
   const texto = dicInput.value.trim();
   if (!texto) return;
@@ -2400,35 +2401,31 @@ async function consultar() {
   dicRespuesta.textContent = 'Patxi está buscando…';
 
   try {
-    // Llamada a TU API Cloudflare Worker
     const res = await fetch(
       "https://grokapi.joniturbu.workers.dev/?q=" + encodeURIComponent(texto)
     );
 
     const data = await res.json();
 
-    // Si la API devuelve error
     if (data.error) {
       dicRespuesta.innerHTML = `<p>No encontrado.</p>`;
       return;
     }
 
-    // Mostrar resultado
     dicRespuesta.innerHTML = `
       <h3>${data.palabra}</h3>
       <p><strong>ES:</strong> ${data.es}</p>
       <p><strong>EUS:</strong> ${data.eu}</p>
     `;
-
   } catch (err) {
     dicRespuesta.innerHTML = `<p>Error al conectar con la API.</p>`;
   }
 }
 
-// Eventos
 dicConsultar.addEventListener('click', consultar);
 dicInput.addEventListener('keydown', e => { if (e.key === 'Enter') consultar(); });
 </script>
 </body>
 </html>
+
 
