@@ -32,11 +32,9 @@ body {
   background: var(--cream);
   color: var(--text);
   min-height: 100vh;
-  background-image:
-    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4aa7a' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4aa7a' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
-/* ── LAUBURU decorativo background ── */
 body::before {
   content: '';
   position: fixed;
@@ -55,161 +53,58 @@ body::before {
   padding: 0 1.25rem 6rem;
 }
 
-/* ════════════════════════════════════
-   HEADER
-════════════════════════════════════ */
-<header class="site-header">
-  <div id="patxi-container">
-    <svg id="patxi-svg" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-      <!-- Cuerpo / chaqueta -->
-      <ellipse cx="40" cy="75" rx="22" ry="14" fill="#3b2a1a"/>
-      <rect x="18" y="60" width="44" height="18" rx="4" fill="#3b2a1a"/>
-      <!-- Camisa blanca interior -->
-      <rect x="34" y="60" width="12" height="16" fill="#f5f0e8"/>
-      <!-- Corbata verde -->
-      <polygon points="40,62 37,68 40,66 43,68" fill="#2d6a3f"/>
-      <!-- Cuello -->
-      <rect x="33" y="55" width="14" height="8" rx="2" fill="#d4a574"/>
-      <!-- Cabeza -->
-      <ellipse cx="40" cy="44" rx="18" ry="20" fill="#d4a574"/>
-      <!-- Cara - ojos -->
-      <ellipse cx="34" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
-      <ellipse cx="46" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
-      <!-- Brillo ojos -->
-      <circle cx="35" cy="41" r="0.8" fill="white"/>
-      <circle cx="47" cy="41" r="0.8" fill="white"/>
-      <!-- Nariz -->
-      <ellipse cx="40" cy="47" rx="2" ry="1.2" fill="#b8835a"/>
-      <!-- Boca -->
-      <path id="patxi-mouth" d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <!-- Bigote -->
-      <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Orejas -->
-      <ellipse cx="22" cy="44" rx="4" ry="5" fill="#d4a574"/>
-      <ellipse cx="58" cy="44" rx="4" ry="5" fill="#d4a574"/>
-      <!-- Txapela -->
-      <ellipse cx="40" cy="27" rx="22" ry="6" fill="#1a1a1a"/>
-      <ellipse cx="40" cy="25" rx="18" ry="10" fill="#222"/>
-      <ellipse cx="40" cy="23" rx="14" ry="8" fill="#2a2a2a"/>
-      <!-- Pompón -->
-      <circle cx="40" cy="16" r="3" fill="#c9a84c"/>
-      <!-- Sombra -->
-      <ellipse cx="40" cy="29" rx="20" ry="3" fill="rgba(0,0,0,0.15)"/>
-    </svg>
-  </div>
-
-  <div class="header-text">
-    <h1>Euskera <span>A1</span></h1>
-    <p>Curso práctico · 9 módulos · Para Ángela</p>
-  </div>
-</header>
-
-<!-- Bocadillo flotante de Patxi -->
-<div id="patxi-bubble"></div>
-
-<!-- FAB del diccionario -->
-<button id="dic-fab">
-  <svg id="fab-patxi" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="40" cy="75" rx="20" ry="12" fill="#5c3d1e"/>
-    <rect x="20" y="62" width="40" height="16" rx="4" fill="#5c3d1e"/>
-    <rect x="34" y="62" width="12" height="14" fill="#f5f0e8"/>
-    <rect x="33" y="57" width="14" height="7" rx="2" fill="#d4a574"/>
-    <ellipse cx="40" cy="45" rx="17" ry="19" fill="#d4a574"/>
-    <ellipse cx="34" cy="43" rx="2.2" ry="2.6" fill="#3b2a1a"/>
-    <ellipse cx="46" cy="43" rx="2.2" ry="2.6" fill="#3b2a1a"/>
-    <circle cx="35" cy="42" r="0.7" fill="white"/>
-    <circle cx="47" cy="42" r="0.7" fill="white"/>
-    <path d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-    <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-    <ellipse cx="23" cy="45" rx="3.5" ry="4.5" fill="#d4a574"/>
-    <ellipse cx="57" cy="45" rx="3.5" ry="4.5" fill="#d4a574"/>
-    <ellipse cx="40" cy="28" rx="21" ry="5.5" fill="#1a1a1a"/>
-    <ellipse cx="40" cy="26" rx="17" ry="9" fill="#222"/>
-    <circle cx="40" cy="17" r="2.8" fill="#c9a84c"/>
-  </svg>
-  Diccionario
-</button>
-
-<!-- Modal del diccionario -->
-<div id="dic-modal">
-  <div class="dic-sheet">
-    <div class="dic-header">
-      <svg id="dic-patxi-big" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-        <!-- (SVG grande de Patxi, idéntico al original salvo el ID) -->
-        <ellipse cx="40" cy="75" rx="22" ry="14" fill="#3b2a1a"/>
-        <rect x="18" y="60" width="44" height="18" rx="4" fill="#3b2a1a"/>
-        <rect x="34" y="60" width="12" height="16" fill="#f5f0e8"/>
-        <polygon points="40,62 37,68 40,66 43,68" fill="#2d6a3f"/>
-        <rect x="33" y="55" width="14" height="8" rx="2" fill="#d4a574"/>
-        <ellipse cx="40" cy="44" rx="18" ry="20" fill="#d4a574"/>
-        <ellipse cx="34" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
-        <ellipse cx="46" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
-        <circle cx="35" cy="41" r="0.8" fill="white"/>
-        <circle cx="47" cy="41" r="0.8" fill="white"/>
-        <ellipse cx="40" cy="47" rx="2" ry="1.2" fill="#b8835a"/>
-        <path id="dic-mouth" d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-        <ellipse cx="22" cy="44" rx="4" ry="5" fill="#d4a574"/>
-        <ellipse cx="58" cy="44" rx="4" ry="5" fill="#d4a574"/>
-        <ellipse cx="40" cy="27" rx="22" ry="6" fill="#1a1a1a"/>
-        <ellipse cx="40" cy="25" rx="18" ry="10" fill="#222"/>
-        <ellipse cx="40" cy="23" rx="14" ry="8" fill="#2a2a2a"/>
-        <circle cx="40" cy="16" r="3" fill="#c9a84c"/>
-        <ellipse cx="40" cy="29" rx="20" ry="3" fill="rgba(0,0,0,0.15)"/>
-      </svg>
-
-      <div class="dic-header-text">
-        <h2>Diccionario IA</h2>
-        <p>Solo vocabulario A1–A2. Euskera ↔ Castellano.</p>
-      </div>
-
-      <button class="dic-close" id="dic-close">✕</button>
-    </div>
-
-    <div class="dic-input-row">
-      <input type="text" id="dic-input" placeholder="etxea, pozik, joan…">
-      <button id="dic-consultar">Buscar</button>
-    </div>
-
-    <div id="dic-respuesta" class="dic-respuesta"></div>
-  </div>
-</div>
-
-<!-- JS de Patxi -->
-<script>
-// ── FRASES DE PATXI ───────────────────────────────
-const frases = [
-  "¡Kaixo! Soy Patxi, tu guía vasco. 🧢",
-  "Recuerda: EGON para ubicación, IZAN para identidad.",
-  "¡Oso ondo! Sigue así, ¡campeón/a!",
-  "¿Dudas con una palabra? Usa el diccionario 👇",
-  "etxean = en casa · etxera = hacia casa · etxetik = desde casa",
-  "Beti = siempre. Inoiz ez = nunca. ¡No los confundas!",
-  "Kaixo = hola · Agur = adiós. ¡Lo más básico!",
-  "Ni nago = estoy (yo). Ni naiz = soy (yo). ¡Fácil!",
-];
-
-let fraseIdx = 0;
-const bubble = document.getElementById('patxi-bubble');
-const patxiSvg = document.getElementById('patxi-svg');
-
-function mostrarFrase() {
-  bubble.textContent = frases[fraseIdx % frases.length];
-  bubble.classList.add('visible');
-  fraseIdx++;
-  setTimeout(() => bubble.classList.remove('visible'), 4000);
+/* ── HEADER ── */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 0 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border);
 }
+#patxi-container {
+  width: 72px; height: 72px;
+  cursor: pointer;
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 8px var(--shadow));
+  transition: transform 0.2s;
+}
+#patxi-container:hover { transform: scale(1.08) rotate(-3deg); }
+#patxi-svg { width: 100%; height: 100%; }
 
-patxiSvg.addEventListener('click', mostrarFrase);
+.header-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--brown);
+  line-height: 1;
+}
+.header-text h1 span { color: var(--green); }
+.header-text p { font-size: 0.8rem; color: var(--stone); margin-top: 0.3rem; }
 
-// Saludo inicial
-setTimeout(mostrarFrase, 1500);
-</script>
+/* Bocadillo de Patxi */
+#patxi-bubble {
+  position: fixed;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--brown);
+  color: var(--cream);
+  padding: 0.6rem 1.1rem;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 4px 16px var(--shadow);
+  border: 2px solid var(--gold);
+  z-index: 300;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+#patxi-bubble.visible { opacity: 1; }
 
-
-/* ════════════════════════════════════
-   MENÚ PRINCIPAL
-════════════════════════════════════ */
+/* ── MENÚ PRINCIPAL ── */
 #menu-principal { animation: fadeUp 0.4s ease both; }
 .menu-intro {
   font-family: 'Playfair Display', serif;
@@ -242,532 +137,77 @@ setTimeout(mostrarFrase, 1500);
   left: 0; top: 0; bottom: 0;
   width: 4px;
   background: var(--green);
-  border-radius: 0;
   transition: width 0.2s;
 }
-.modulo-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px var(--shadow);
-  border-color: var(--green);
-}
+.modulo-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); border-color: var(--green); }
 .modulo-card:hover::before { width: 6px; }
-.modulo-card .card-num {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--stone);
-  margin-bottom: 0.3rem;
-}
-.modulo-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--brown);
-  margin-bottom: 0.2rem;
-}
+.modulo-card .card-num { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--stone); margin-bottom: 0.3rem; }
+.modulo-card h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--brown); margin-bottom: 0.2rem; }
 .modulo-card p { font-size: 0.8rem; color: var(--text-muted); }
-.card-check {
-  position: absolute;
-  right: 1rem; top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
-  color: var(--green);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
+.card-check { position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: var(--green); opacity: 0; transition: opacity 0.3s; }
 .modulo-card.completed .card-check { opacity: 1; }
 .modulo-card.completed::before { background: var(--gold); }
 
-/* ════════════════════════════════════
-   MÓDULO – vista interior
-════════════════════════════════════ */
+/* ── MÓDULO interior ── */
 .modulo { display: none; animation: fadeUp 0.3s ease both; }
-
-.modulo-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 0 1.25rem;
-  border-bottom: 2px solid var(--border);
-  margin-bottom: 1.5rem;
-}
-.back-btn {
-  background: var(--brown);
-  color: var(--cream);
-  border: none;
-  border-radius: 6px;
-  padding: 0.5rem 1rem;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.82rem;
-  cursor: pointer;
-  transition: background 0.15s;
-  flex-shrink: 0;
-}
+.modulo-header { display: flex; align-items: center; gap: 1rem; padding: 1rem 0 1.25rem; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; }
+.back-btn { background: var(--brown); color: var(--cream); border: none; border-radius: 6px; padding: 0.5rem 1rem; font-family: 'Lato', sans-serif; font-size: 0.82rem; cursor: pointer; transition: background 0.15s; flex-shrink: 0; }
 .back-btn:hover { background: var(--brown2); }
-.modulo-header-info span {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--stone);
-}
-.modulo-header-info h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--brown);
-  line-height: 1.2;
-}
+.modulo-header-info span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--stone); }
+.modulo-header-info h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--brown); line-height: 1.2; }
 
 /* PROGRESO */
-.progress-wrap {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.5rem;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 1px 4px var(--shadow);
-}
+.progress-wrap { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; background: white; border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; box-shadow: 0 1px 4px var(--shadow); }
 .progress-label { font-size: 0.75rem; color: var(--stone); white-space: nowrap; }
 .progress-bar-outer { flex: 1; background: var(--cream2); border-radius: 99px; height: 7px; overflow: hidden; }
-.progress-bar-inner {
-  height: 7px;
-  background: linear-gradient(90deg, var(--green), var(--green2));
-  border-radius: 99px;
-  transition: width 0.5s cubic-bezier(.4,0,.2,1);
-  width: 0%;
-}
+.progress-bar-inner { height: 7px; background: linear-gradient(90deg, var(--green), var(--green2)); border-radius: 99px; transition: width 0.5s cubic-bezier(.4,0,.2,1); width: 0%; }
 .progress-count { font-size: 0.78rem; color: var(--green); font-weight: 700; white-space: nowrap; }
 
 /* TEORÍA */
-.teoria {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  margin-bottom: 1.75rem;
-  overflow: hidden;
-  box-shadow: 0 2px 8px var(--shadow);
-}
-.teoria-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 1.25rem;
-  cursor: pointer;
-  user-select: none;
-  background: var(--cream2);
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s;
-}
+.teoria { background: white; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 1.75rem; overflow: hidden; box-shadow: 0 2px 8px var(--shadow); }
+.teoria-toggle { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; cursor: pointer; user-select: none; background: var(--cream2); border-bottom: 1px solid transparent; transition: border-color 0.2s; }
 .teoria-toggle.open { border-bottom-color: var(--border); }
-.teoria-toggle h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.95rem;
-  color: var(--brown2);
-  display: flex; align-items: center; gap: 0.5rem;
-}
+.teoria-toggle h3 { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--brown2); display: flex; align-items: center; gap: 0.5rem; }
 .teoria-toggle .chevron { color: var(--stone); font-size: 0.75rem; transition: transform 0.2s; }
 .teoria-toggle.open .chevron { transform: rotate(180deg); }
-<div class="teoria-body">
-  <h2>Izan / Egon · Kasuak de lugar</h2>
-
-  <h3>1. IZAN (ser)</h3>
-  <p>Se usa para describir quién eres, qué eres y cómo eres. Habla de identidad, profesión, origen y características permanentes.</p>
-  <ul>
-    <li><strong>Ni naiz</strong> = yo soy · <strong>Zu zara</strong> = tú eres · <strong>Hura da</strong> = él/ella es</li>
-    <li><strong>Gu gara</strong> = somos · <strong>Zuek zarete</strong> = sois · <strong>Haiek dira</strong> = son</li>
-    <li><em>Ni euskalduna naiz</em> = Soy vasco/a</li>
-    <li><em>Hura medikua da</em> = Él/Ella es médico</li>
-    <li><em>Jon altua da</em> = Jon es alto</li>
-  </ul>
-
-  <h3>2. EGON (estar)</h3>
-  <p>Se usa para ubicación, estados temporales, emociones y condiciones físicas.</p>
-  <ul>
-    <li><strong>Ni nago</strong> = estoy · <strong>Zu zaude</strong> = estás · <strong>Hura dago</strong> = está</li>
-    <li><strong>Gu gaude</strong> = estamos · <strong>Zuek zaudete</strong> = estáis · <strong>Haiek daude</strong> = están</li>
-    <li><em>Ni etxean nago</em> = Estoy en casa</li>
-    <li><em>Hura pozik dago</em> = Él/Ella está contento/a</li>
-    <li><em>Gu lanean gaude</em> = Estamos en el trabajo</li>
-  </ul>
-
-  <h3>3. Kasuak de lugar (-n, -ra, -tik)</h3>
-  <p>Los casos indican si hablas de un lugar donde estás, hacia donde vas o desde donde vienes.</p>
-  <ul>
-    <li><strong>-n</strong> = EN → <em>etxean</em> (en casa), <em>kalean</em> (en la calle)</li>
-    <li><strong>-ra</strong> = HACIA → <em>etxera</em> (a casa), <em>kalera</em> (a la calle)</li>
-    <li><strong>-tik</strong> = DESDE → <em>etxetik</em> (desde casa), <em>dendatik</em> (desde la tienda)</li>
-  </ul>
-
-  <h3>4. Preguntas clave</h3>
-  <p><strong>Non?</strong> (¿dónde?) → -n · <strong>Nora?</strong> (¿adónde?) → -ra · <strong>Nondik?</strong> (¿desde dónde?) → -tik</p>
-
-  <h3>5. Errores típicos</h3>
-  <ul>
-    <li>Decir <em>*etxera nago</em> → incorrecto. <strong>Nago</strong> va con -n.</li>
-    <li>Decir <em>*etxean noa</em> → incorrecto. <strong>Noa</strong> va con -ra.</li>
-  </ul>
-</div>
-
-<div class="teoria-body">
-  <h2>Diferencia IZAN / EGON</h2>
-
-  <h3>1. IZAN (ser)</h3>
-  <p>Describe identidad, profesión, origen y rasgos permanentes. No cambia según el estado o el momento.</p>
-  <ul>
-    <li><em>Ni irakaslea naiz</em> = Soy profesor/a</li>
-    <li><em>Zu Bilbokoa zara</em> = Eres de Bilbao</li>
-    <li><em>Hura altua da</em> = Él/Ella es alto/a</li>
-  </ul>
-
-  <h3>2. EGON (estar)</h3>
-  <p>Describe estados temporales, emociones, ubicación y condiciones físicas.</p>
-  <ul>
-    <li><em>Ni pozik nago</em> = Estoy contento/a</li>
-    <li><em>Zu etxean zaude</em> = Estás en casa</li>
-    <li><em>Hura gaixo dago</em> = Él/Ella está enfermo/a</li>
-  </ul>
-
-  <h3>3. Trucos rápidos</h3>
-  <ul>
-    <li>Si puedes añadir “hoy”, “ahora”, “en este momento” → usa <strong>EGON</strong>.</li>
-    <li>Si puedes añadir “siempre”, “normalmente”, “de forma permanente” → usa <strong>IZAN</strong>.</li>
-  </ul>
-
-  <h3>4. Errores comunes</h3>
-  <ul>
-    <li><em>*Ni pozik naiz</em> → incorrecto. Debe ser <strong>nago</strong>.</li>
-    <li><em>*Zu medikua zaude</em> → incorrecto. Debe ser <strong>zara</strong>.</li>
-  </ul>
-</div>
-
-<div class="teoria-body">
-  <h2>Leku kasuak: -n / -ra / -tik</h2>
-
-  <h3>1. -n (EN)</h3>
-  <p>Indica ubicación o lugar donde estás.</p>
-  <ul>
-    <li><em>etxean</em> = en casa</li>
-    <li><em>dendan</em> = en la tienda</li>
-    <li><em>eskolan</em> = en la escuela</li>
-  </ul>
-
-  <h3>2. -ra (HACIA)</h3>
-  <p>Indica destino o dirección.</p>
-  <ul>
-    <li><em>etxera</em> = a casa</li>
-    <li><em>dendara</em> = a la tienda</li>
-    <li><em>kalera</em> = a la calle</li>
-  </ul>
-
-  <h3>3. -tik (DESDE)</h3>
-  <p>Indica origen o punto de partida.</p>
-  <ul>
-    <li><em>etxetik</em> = desde casa</li>
-    <li><em>dendatik</em> = desde la tienda</li>
-    <li><em>eskolatik</em> = desde la escuela</li>
-  </ul>
-
-  <h3>4. Regla de oro</h3>
-  <p>Movimiento → -ra / -tik · Ubicación → -n</p>
-
-  <h3>5. Ejemplos útiles</h3>
-  <ul>
-    <li><em>Kalera noa</em> = Voy a la calle</li>
-    <li><em>Kalean nago</em> = Estoy en la calle</li>
-    <li><em>Kaletik nator</em> = Vengo de la calle</li>
-  </ul>
-</div>
-
-<div class="teoria-body">
-  <h2>Aditz arruntak · Verbos frecuentes</h2>
-
-  <h3>1. Joan (ir)</h3>
-  <p>Verbo de movimiento. Se combina con -ra (destino).</p>
-  <ul>
-    <li><em>ni noa</em> = yo voy</li>
-    <li><em>zu zoaz</em> = tú vas</li>
-    <li><em>hura doa</em> = él/ella va</li>
-  </ul>
-
-  <h3>2. Etorri (venir)</h3>
-  <p>Indica movimiento hacia donde está el hablante.</p>
-  <ul>
-    <li><em>ni nator</em> = yo vengo</li>
-    <li><em>zu zatoz</em> = tú vienes</li>
-    <li><em>hura dator</em> = él/ella viene</li>
-  </ul>
-
-  <h3>3. Verbos útiles del día a día</h3>
-  <ul>
-    <li><strong>eduki</strong> = tener</li>
-    <li><strong>egin</strong> = hacer</li>
-    <li><strong>ibili</strong> = andar</li>
-    <li><strong>ikusi</strong> = ver</li>
-  </ul>
-
-  <h3>4. Consejos prácticos</h3>
-  <ul>
-    <li>“Ir” → <strong>-ra</strong></li>
-    <li>“Venir” → <strong>-tik</strong> o sin caso si vienes hacia aquí</li>
-  </ul>
-</div>
-
-<div class="teoria-body">
-  <h2>Posesiboak · Posesivos</h2>
-
-  <h3>1. Tabla básica</h3>
-  <ul>
-    <li><strong>nire</strong> = mi</li>
-    <li><strong>zure</strong> = tu</li>
-    <li><strong>bere</strong> = su (de él/ella)</li>
-    <li><strong>gure</strong> = nuestro</li>
-    <li><strong>zuen</strong> = vuestro</li>
-    <li><strong>haien</strong> = su (de ellos)</li>
-  </ul>
-
-  <h3>2. Ejemplos reales</h3>
-  <ul>
-    <li><em>nire laguna</em> = mi amigo/a</li>
-    <li><em>zure etxea</em> = tu casa</li>
-    <li><em>bere autoa</em> = su coche</li>
-  </ul>
-
-  <h3>3. Regla importante</h3>
-  <p>El posesivo NO cambia por género ni número: siempre igual.</p>
-
-  <h3>4. Errores típicos</h3>
-  <ul>
-    <li><em>*nirea etxea</em> → incorrecto. Es <strong>nire etxea</strong>.</li>
-  </ul>
-</div>
-
-<div class="teoria-body">
-  <h2>Denbora eta ohiturak · Tiempo y frecuencia</h2>
-
-  <h3>1. Tiempo</h3>
-  <ul>
-    <li><strong>gaur</strong> = hoy</li>
-    <li><strong>bihar</strong> = mañana</li>
-    <li><strong>atzo</strong> = ayer</li>
-  </ul>
-
-  <h3>2. Frecuencia</h3>
-  <ul>
-    <li><strong>beti</strong> = siempre</li>
-    <li><strong>inoiz ez</strong> = nunca</li>
-    <li><strong>askotan</strong> = a menudo</li>
-    <li><strong>batzuetan</strong> = a veces</li>
-  </ul>
-
-  <h3>3. Ejemplos útiles</h3>
-  <ul>
-    <li><em>Askotan kafea edaten dut</em> = A menudo tomo café</li>
-    <li><em>Inoiz ez noa gimnasiora</em> = Nunca voy al gimnasio</li>
-    <li><em>Gaur etxean nago</em> = Hoy estoy en casa</li>
-  </ul>
-
-  <h3>4. Trucos</h3>
-  <p>La frecuencia suele ir antes del verbo: <em>Beti egiten dut</em>.</p>
-</div>
-
-<div class="teoria-body">
-  <h2>Galderak · Preguntas básicas</h2>
-
-  <h3>1. Interrogativos principales</h3>
-  <ul>
-    <li><strong>zer</strong> = qué</li>
-    <li><strong>non</strong> = dónde</li>
-    <li><strong>nora</strong> = adónde</li>
-    <li><strong>nondik</strong> = de dónde</li>
-    <li><strong>noiz</strong> = cuándo</li>
-    <li><strong>norekin</strong> = con quién</li>
-    <li><strong>nola</strong> = cómo</li>
-  </ul>
-
-  <h3>2. Estructura</h3>
-  <p>La palabra interrogativa va SIEMPRE al principio.</p>
-
-  <h3>3. Ejemplos</h3>
-  <ul>
-    <li><em>Non zaude?</em> = ¿Dónde estás?</li>
-    <li><em>Nora zoaz?</em> = ¿Adónde vas?</li>
-    <li><em>Zer egiten duzu?</em> = ¿Qué haces?</li>
-    <li><em>Norekin zatoz?</em> = ¿Con quién vienes?</li>
-  </ul>
-</div>
-
-<div class="teoria-body">
-  <h2>Elkarrizketak · Frases útiles</h2>
-
-  <h3>1. Saludos</h3>
-  <ul>
-    <li><strong>Kaixo!</strong> = ¡Hola!</li>
-    <li><strong>Agur!</strong> = ¡Adiós!</li>
-    <li><strong>Egun on!</strong> = ¡Buenos días!</li>
-    <li><strong>Arratsalde on!</strong> = ¡Buenas tardes!</li>
-  </ul>
-
-  <h3>2. Preguntas comunes</h3>
-  <ul>
-    <li><strong>Zer moduz?</strong> = ¿Qué tal?</li>
-    <li><strong>Nola zaude?</strong> = ¿Cómo estás?</li>
-    <li><strong>Nondik zara?</strong> = ¿De dónde eres?</li>
-  </ul>
-
-  <h3>3. Expresiones útiles</h3>
-  <ul>
-    <li><strong>Mesedez</strong> = Por favor</li>
-    <li><strong>Eskerrik asko</strong> = Gracias</li>
-    <li><strong>Barkatu</strong> = Perdón</li>
-  </ul>
-
-  <h3>4. Mini diálogo</h3>
-  <p><em>— Kaixo! Zer moduz?<br>
-     — Oso ondo, eta zu?</em></p>
-</div>
-
-<div class="teoria-body">
-  <h2>Praktika finala · Repaso global A1</h2>
-
-  <p>Este módulo combina todo lo aprendido:</p>
-  <ul>
-    <li>Verbos básicos (joan, etorri, egin…)</li>
-    <li>Izan / Egon</li>
-    <li>Casos de lugar (-n, -ra, -tik)</li>
-    <li>Posesivos</li>
-    <li>Interrogativos</li>
-    <li>Vocabulario esencial</li>
-  </ul>
-
-  <h3>Objetivo</h3>
-  <p>Ser capaz de entender y producir frases simples en situaciones reales.</p>
-
-  <h3>Ejemplos</h3>
-  <ul>
-    <li><em>Gaur etxetik nator eta eskolara noa</em></li>
-    <li><em>Nire laguna pozik dago</em></li>
-    <li><em>Zer egiten duzu gaur?</em></li>
-  </ul>
-</div>
-
+.teoria-body { display: none; padding: 1.25rem 1.5rem; line-height: 1.7; }
+.teoria-body.open { display: block; }
+.teoria-body h2 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--brown); margin-bottom: 0.75rem; }
+.teoria-body h3 { font-size: 0.9rem; font-weight: 700; color: var(--brown2); margin: 1rem 0 0.4rem; }
+.teoria-body p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.teoria-body ul { padding-left: 1.25rem; margin-bottom: 0.5rem; }
+.teoria-body li { font-size: 0.86rem; color: var(--text-muted); margin-bottom: 0.3rem; }
+.teoria-body strong { color: var(--brown); }
+.teoria-body em { color: var(--green2); font-style: italic; }
 
 /* EJERCICIOS */
-.ejercicio {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 0.75rem;
-  box-shadow: 0 2px 8px var(--shadow);
-  animation: fadeUp 0.3s ease both;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.ejercicio.correct-anim {
-  border-color: var(--green);
-  box-shadow: 0 0 0 2px rgba(45,106,63,0.2), 0 4px 16px var(--shadow);
-}
+.ejercicio { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 0.75rem; box-shadow: 0 2px 8px var(--shadow); animation: fadeUp 0.3s ease both; transition: border-color 0.2s, box-shadow 0.2s; }
+.ejercicio.correct-anim { border-color: var(--green); box-shadow: 0 0 0 2px rgba(45,106,63,0.2), 0 4px 16px var(--shadow); }
 .ejercicio.error-anim { animation: shake 0.35s ease; border-color: var(--red); }
-
-.ej-meta {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--stone);
-  margin-bottom: 0.75rem;
-}
-.ej-pregunta {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--brown);
-  line-height: 1.4;
-  margin-bottom: 1.1rem;
-}
+.ej-meta { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--stone); margin-bottom: 0.75rem; }
+.ej-pregunta { font-family: 'Playfair Display', serif; font-size: 1.15rem; font-weight: 700; color: var(--brown); line-height: 1.4; margin-bottom: 1.1rem; }
 .opciones-grid { display: flex; flex-direction: column; gap: 0.55rem; }
-.opcion {
-  background: var(--cream);
-  border: 1.5px solid var(--border);
-  border-radius: 7px;
-  padding: 0.7rem 1rem;
-  text-align: left;
-  cursor: pointer;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  transition: all 0.15s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.opcion-letter {
-  width: 26px; height: 26px;
-  border: 1.5px solid var(--border);
-  border-radius: 5px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: var(--stone);
-  flex-shrink: 0;
-  background: white;
-  transition: all 0.15s;
-}
+.opcion { background: var(--cream); border: 1.5px solid var(--border); border-radius: 7px; padding: 0.7rem 1rem; text-align: left; cursor: pointer; font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--text-muted); transition: all 0.15s ease; display: flex; align-items: center; gap: 0.75rem; }
+.opcion-letter { width: 26px; height: 26px; border: 1.5px solid var(--border); border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; font-weight: 700; color: var(--stone); flex-shrink: 0; background: white; transition: all 0.15s; }
 .opcion:hover { background: var(--green-light); border-color: var(--green); color: var(--brown); }
 .opcion:hover .opcion-letter { background: var(--green); border-color: var(--green); color: white; }
 .opcion.correct { background: #e8f5e9; border-color: var(--green); color: var(--green); font-weight: 700; cursor: default; }
 .opcion.correct .opcion-letter { background: var(--green); border-color: var(--green); color: white; }
 .opcion.wrong { background: #fdecea; border-color: var(--red); color: var(--red); cursor: default; }
 .opcion.wrong .opcion-letter { background: var(--red); border-color: var(--red); color: white; }
-
-.feedback {
-  margin-top: 0.9rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  min-height: 1.2rem;
-  display: flex; align-items: center; gap: 0.35rem;
-}
+.feedback { margin-top: 0.9rem; font-size: 0.85rem; font-weight: 700; min-height: 1.2rem; display: flex; align-items: center; gap: 0.35rem; }
 .feedback.ok { color: var(--green); }
 .feedback.error { color: var(--red); }
 
 /* MÓDULO COMPLETADO */
-.modulo-complete {
-  background: white;
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  padding: 2.5rem;
-  text-align: center;
-  box-shadow: 0 8px 32px var(--shadow);
-  animation: fadeUp 0.5s ease both;
-}
+.modulo-complete { background: white; border: 2px solid var(--gold); border-radius: 12px; padding: 2.5rem; text-align: center; box-shadow: 0 8px 32px var(--shadow); animation: fadeUp 0.5s ease both; }
 .modulo-complete .big-emoji { font-size: 3.5rem; margin-bottom: 1rem; }
-.modulo-complete h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  color: var(--brown);
-  margin-bottom: 0.5rem;
-}
+.modulo-complete h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: var(--brown); margin-bottom: 0.5rem; }
 .modulo-complete p { color: var(--text-muted); font-size: 0.9rem; }
-.btn-volver-complete {
-  margin-top: 1.5rem;
-  background: var(--green);
-  color: white;
-  border: none;
-  border-radius: 7px;
-  padding: 0.8rem 2rem;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.15s;
-  letter-spacing: 0.03em;
-}
+.btn-volver-complete { margin-top: 1.5rem; background: var(--green); color: white; border: none; border-radius: 7px; padding: 0.8rem 2rem; font-family: 'Lato', sans-serif; font-size: 0.9rem; font-weight: 700; cursor: pointer; transition: background 0.15s; letter-spacing: 0.03em; }
 .btn-volver-complete:hover { background: var(--green2); }
 
-/* ════════════════════════════════════
-   DICCIONARIO – FAB + MODAL
-════════════════════════════════════ */
+/* ── DICCIONARIO FAB + MODAL ── */
 #dic-fab {
   position: fixed;
   right: 1.25rem;
@@ -792,146 +232,34 @@ setTimeout(mostrarFrase, 1500);
   overflow: hidden;
 }
 #dic-fab:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(59,42,26,0.45); background: var(--brown2); }
-#fab-hamish {
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-  animation: hamish-float 3s ease-in-out infinite;
-  margin-right: 0.4rem;
-}
+#fab-patxi { width: 44px; height: 44px; flex-shrink: 0; margin-right: 0.4rem; }
 
-/* MODAL */
-#dic-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(42,31,14,0.6);
-  backdrop-filter: blur(4px);
-  display: none;
-  align-items: flex-end;
-  justify-content: center;
-  z-index: 200;
-  padding: 1rem;
-}
+#dic-modal { position: fixed; inset: 0; background: rgba(42,31,14,0.6); backdrop-filter: blur(4px); display: none; align-items: flex-end; justify-content: center; z-index: 200; padding: 1rem; }
 #dic-modal.open { display: flex; animation: fadeIn 0.2s ease; }
-
-.dic-sheet {
-  background: var(--cream);
-  border: 2px solid var(--border);
-  border-radius: 16px 16px 10px 10px;
-  width: 100%;
-  max-width: 520px;
-  padding: 1.5rem;
-  animation: slideUp 0.28s ease both;
-  max-height: 82vh;
-  overflow-y: auto;
-  box-shadow: 0 -4px 40px rgba(59,42,26,0.2);
-}
-.dic-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-#dic-hamish-big {
-  width: 64px;
-  height: 64px;
-  animation: hamish-float 3s ease-in-out infinite;
-  flex-shrink: 0;
-  cursor: pointer;
-}
+.dic-sheet { background: var(--cream); border: 2px solid var(--border); border-radius: 16px 16px 10px 10px; width: 100%; max-width: 520px; padding: 1.5rem; animation: slideUp 0.28s ease both; max-height: 82vh; overflow-y: auto; box-shadow: 0 -4px 40px rgba(59,42,26,0.2); }
+.dic-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+#dic-patxi-big { width: 64px; height: 64px; flex-shrink: 0; }
 .dic-header-text { flex: 1; }
-.dic-header-text h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.15rem;
-  color: var(--brown);
-}
+.dic-header-text h2 { font-family: 'Playfair Display', serif; font-size: 1.15rem; color: var(--brown); }
 .dic-header-text p { font-size: 0.78rem; color: var(--stone); margin-top: 0.2rem; }
-.dic-close {
-  background: var(--cream2);
-  border: 1px solid var(--border);
-  color: var(--stone);
-  border-radius: 6px;
-  width: 32px; height: 32px;
-  cursor: pointer;
-  font-size: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: all 0.15s;
-  flex-shrink: 0;
-  align-self: flex-start;
-}
+.dic-close { background: var(--cream2); border: 1px solid var(--border); color: var(--stone); border-radius: 6px; width: 32px; height: 32px; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: all 0.15s; flex-shrink: 0; align-self: flex-start; }
 .dic-close:hover { background: var(--border); color: var(--brown); }
-
-.dic-input-row {
-  display: flex;
-  gap: 0.6rem;
-  margin-bottom: 0.75rem;
-}
-.dic-input-row input {
-  flex: 1;
-  background: white;
-  border: 1.5px solid var(--border);
-  border-radius: 7px;
-  padding: 0.65rem 1rem;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9rem;
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.15s;
-}
+.dic-input-row { display: flex; gap: 0.6rem; margin-bottom: 0.75rem; }
+.dic-input-row input { flex: 1; background: white; border: 1.5px solid var(--border); border-radius: 7px; padding: 0.65rem 1rem; font-family: 'Lato', sans-serif; font-size: 0.9rem; color: var(--text); outline: none; transition: border-color 0.15s; }
 .dic-input-row input::placeholder { color: var(--stone); }
 .dic-input-row input:focus { border-color: var(--green); }
-.dic-input-row button {
-  background: var(--green);
-  color: white;
-  border: none;
-  border-radius: 7px;
-  padding: 0.65rem 1.1rem;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background 0.15s;
-  white-space: nowrap;
-}
+.dic-input-row button { background: var(--green); color: white; border: none; border-radius: 7px; padding: 0.65rem 1.1rem; font-family: 'Lato', sans-serif; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
 .dic-input-row button:hover { background: var(--green2); }
-
-.dic-respuesta {
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem 1.1rem;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  line-height: 1.7;
-  display: none;
-  border-left: 4px solid var(--gold);
-}
+.dic-input-row button:disabled { opacity: 0.6; cursor: not-allowed; }
+.dic-respuesta { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.1rem; font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; display: none; border-left: 4px solid var(--gold); }
 .dic-respuesta.visible { display: block; animation: fadeUp 0.2s ease; }
 
-/* ════════════════════════════════════
-   ANIMATIONS
-════════════════════════════════════ */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to   { transform: translateY(0); opacity: 1; }
-}
-@keyframes shake {
-  0%,100% { transform: translateX(0); }
-  25%      { transform: translateX(-7px); }
-  75%      { transform: translateX(7px); }
-}
+/* ANIMACIONES */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes shake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-7px); } 75% { transform: translateX(7px); } }
 
-/* ════════════════════════════════════
-   RESPONSIVE
-════════════════════════════════════ */
 @media (max-width: 480px) {
   .site-header { padding: 1rem; }
   .modulos-grid { grid-template-columns: 1fr; }
@@ -944,41 +272,27 @@ setTimeout(mostrarFrase, 1500);
 
 <!-- ══ HEADER ══ -->
 <header class="site-header">
-  <div id="hamish-container">
-    <svg id="hamish-svg" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
-      <!-- Cuerpo / chaqueta -->
+  <div id="patxi-container">
+    <svg id="patxi-svg" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
       <ellipse cx="40" cy="75" rx="22" ry="14" fill="#3b2a1a"/>
       <rect x="18" y="60" width="44" height="18" rx="4" fill="#3b2a1a"/>
-      <!-- Camisa blanca interior -->
       <rect x="34" y="60" width="12" height="16" fill="#f5f0e8"/>
-      <!-- Corbata verde -->
       <polygon points="40,62 37,68 40,66 43,68" fill="#2d6a3f"/>
-      <!-- Cuello -->
       <rect x="33" y="55" width="14" height="8" rx="2" fill="#d4a574"/>
-      <!-- Cabeza -->
       <ellipse cx="40" cy="44" rx="18" ry="20" fill="#d4a574"/>
-      <!-- Cara - ojos -->
       <ellipse cx="34" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
       <ellipse cx="46" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
-      <!-- Brillo ojos -->
       <circle cx="35" cy="41" r="0.8" fill="white"/>
       <circle cx="47" cy="41" r="0.8" fill="white"/>
-      <!-- Nariz -->
       <ellipse cx="40" cy="47" rx="2" ry="1.2" fill="#b8835a"/>
-      <!-- Boca -->
-      <path id="hamish-mouth" d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <!-- Bigote -->
+      <path id="patxi-mouth" d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
       <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <!-- Orejas -->
       <ellipse cx="22" cy="44" rx="4" ry="5" fill="#d4a574"/>
       <ellipse cx="58" cy="44" rx="4" ry="5" fill="#d4a574"/>
-      <!-- BOINA txapela -->
       <ellipse cx="40" cy="27" rx="22" ry="6" fill="#1a1a1a"/>
       <ellipse cx="40" cy="25" rx="18" ry="10" fill="#222"/>
       <ellipse cx="40" cy="23" rx="14" ry="8" fill="#2a2a2a"/>
-      <!-- Pompón de la boina -->
       <circle cx="40" cy="16" r="3" fill="#c9a84c"/>
-      <!-- Sombra debajo de boina -->
       <ellipse cx="40" cy="29" rx="20" ry="3" fill="rgba(0,0,0,0.15)"/>
     </svg>
   </div>
@@ -988,1167 +302,10 @@ setTimeout(mostrarFrase, 1500);
   </div>
 </header>
 
-<!-- ══ MENÚ PRINCIPAL ══ -->
-<section id="menu-principal">
-  <p class="menu-intro">Elige un módulo. No avanzas al siguiente ejercicio hasta acertar el actual.</p>
-  <div class="modulos-grid">
-    <div class="modulo-card" data-modulo="0">
-      <div class="card-num">Módulo 0</div>
-      <h3>Repaso básico</h3>
-      <p>-n, -ra, -tik · Izan / Egon básicos</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="1">
-      <div class="card-num">Módulo 1</div>
-      <h3>Izan / Egon</h3>
-      <p>Ser / estar, estados y profesiones</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="2">
-      <div class="card-num">Módulo 2</div>
-      <h3>Leku kasuak</h3>
-      <p>Lugares con -n, -ra, -tik</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="3">
-      <div class="card-num">Módulo 3</div>
-      <h3>Aditz arruntak</h3>
-      <p>joan, etorri, eduki, egin, ibili, ikusi…</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="4">
-      <div class="card-num">Módulo 4</div>
-      <h3>Posesiboak</h3>
-      <p>nire, zure, bere, gure, zuen, haien</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="5">
-      <div class="card-num">Módulo 5</div>
-      <h3>Denbora eta ohiturak</h3>
-      <p>gaur, bihar, beti, askotan…</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="6">
-      <div class="card-num">Módulo 6</div>
-      <h3>Galderak</h3>
-      <p>zer, non, norekin, noiz…</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="7">
-      <div class="card-num">Módulo 7</div>
-      <h3>Elkarrizketak</h3>
-      <p>Frases útiles de conversación</p>
-      <span class="card-check">✓</span>
-    </div>
-    <div class="modulo-card" data-modulo="8">
-      <div class="card-num">Módulo 8</div>
-      <h3>Praktika finala</h3>
-      <p>Repaso global A1</p>
-      <span class="card-check">✓</span>
-    </div>
-  </div>
-</section>
+<!-- Bocadillo de Patxi -->
+<div id="patxi-bubble"></div>
 
-<!-- ══════════════════════════════════════
-     MÓDULOS
-══════════════════════════════════════ -->
-
-<!-- MÓDULO 0 -->
-<section id="modulo-0" class="modulo">
-  <div class="modulo-header">
-    <button class="back-btn" data-volver>← Volver</button>
-    <div class="modulo-header-info">
-      <span>Módulo 0</span>
-      <h2>Repaso básico</h2>
-    </div>
-  </div>
-  <div class="progress-wrap">
-    <span class="progress-label">Progreso</span>
-    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
-    <span class="progress-count">0 / 20</span>
-  </div>
-  <div class="teoria">
-    <div class="teoria-toggle">
-      <h3>📖 Teoría</h3><span class="chevron">▼</span>
-    </div>
-    <div class="teoria-body">
-      <h2>Izan y Egon · Kasuak</h2>
-      <h3>IZAN (ser)</h3>
-      <p>Para identidad, profesión y descripciones permanentes.</p>
-      <ul>
-        <li><strong>Ni naiz</strong> · <strong>Zu zara</strong> · <strong>Hura da</strong></li>
-        <li><strong>Gu gara</strong> · <strong>Zuek zarete</strong> · <strong>Haiek dira</strong></li>
-        <li><em>Ni irakaslea naiz</em> = Yo soy profesor/a</li>
-        <li><em>Hura medikua da</em> = Él/Ella es médico</li>
-      </ul>
-      <h3>EGON (estar)</h3>
-      <p>Para ubicación y estados.</p>
-      <ul>
-        <li><strong>Ni nago</strong> · <strong>Zu zaude</strong> · <strong>Hura dago</strong></li>
-        <li><strong>Gu gaude</strong> · <strong>Zuek zaudete</strong> · <strong>Haiek daude</strong></li>
-        <li><em>Ni etxean nago</em> = Estoy en casa</li>
-        <li><em>Hura nekatuta dago</em> = Él/Ella está cansado/a</li>
-      </ul>
-      <h3>Kasuak de lugar</h3>
-      <ul>
-        <li><strong>-n</strong> = EN (donde estás) → etxean, eskolan, kalean</li>
-        <li><strong>-ra</strong> = HACIA (dirección) → etxera, eskolara, kalera</li>
-        <li><strong>-tik</strong> = DESDE (origen) → etxetik, eskolatik, kaletik</li>
-      </ul>
-    </div>
-  </div>
-  <div class="ejercicios-wrap" data-total="10">
-    <div class="ejercicio" data-correct="B">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">¿Dónde estás? (Non zaude?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Etxera</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Etxean</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Etxetik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">¿Adónde vas? (Nora zoaz?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Dendara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Dendan</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dendatik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">¿De dónde vienes? (Nondik zatoz?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Kalean</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Kalera</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Kaletik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">Completa: Yo soy profesor/a. (Ni ____ irakaslea)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nago</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">Completa: Ella está cansada. (Hura nekatuta ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dago</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>gaude</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">¿Dónde está la escuela? (Non dago eskola?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Eskolara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Eskolatik</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Eskolan</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">Voy a casa. (Etxe____ noa)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>ra</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>an</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>tik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">Estoy en la calle. (Kale____ nago)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>ra</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>an</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>tik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">Vengo de la tienda. (Denda____ nator)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>ra</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>an</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>tik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">Nosotros somos estudiantes. (Gu ikasleak ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-<!-- MÓDULO 1 -->
-<section id="modulo-1" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 1</span><h2>Izan / Egon</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 3</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Diferencia Izan / Egon</h2><ul><li><em>Ni irakaslea naiz</em> → ser (profesión, identidad)</li><li><em>Ni pozik nago</em> → estar (estado anímico)</li><li><em>Zu etxean zaude</em> → estar (ubicación)</li></ul><h3>Regla clave</h3><p>Ubicación o estado temporal → EGON. Identidad o profesión → IZAN.</p></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-   <div class="ejercicio" data-correct="A">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">Yo soy de Bilbao. (Ni Bilbokoa ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nago</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">Ella está contenta. (Hura pozik ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gara</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">Nosotros estamos en casa. (Gu etxean ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">Tú eres médico. (Zu medikua ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">¿Dónde estás? (Non ____?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">Ellos son amigos. (Haiek lagunak ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dago</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">Yo estoy cansado/a. (Ni nekatuta ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>nago</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>naiz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">Vosotros sois estudiantes. (Zuek ikasleak ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zaudete</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zarete</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">Ella está en casa. (Hura etxean ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">Nosotros somos de Donostia. (Gu Donostiakoak ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-<!-- MÓDULO 2 -->
-<section id="modulo-2" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 2</span><h2>Leku kasuak</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 1</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Lugares con -n, -ra, -tik</h2><ul><li><strong>dendan</strong> = en la tienda · <strong>dendara</strong> = hacia la tienda · <strong>dendatik</strong> = desde la tienda</li></ul></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-    <div class="ejercicio" data-correct="A">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">Estoy en la tienda. (Estoy EN…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Dendan</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Dendara</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dendatik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">Voy a la escuela. (Voy HACIA…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Eskolan</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Eskolara</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Eskolatik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">Vengo de la calle. (Vengo DESDE…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Kalean</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Kalera</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Kaletik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">Estoy en casa. (Estoy EN…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Etxean</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Etxera</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Etxetik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">Voy al supermercado. (Voy HACIA…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Supermerkatuan</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Supermerkatura</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Supermerkatutik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">Vengo de la escuela. (Vengo DESDE…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Eskolan</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Eskalera</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Ekolatik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">Estoy en el parque. (Estoy EN…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Parkean</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Parkerara</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Parketik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">Voy al médico. (Voy HACIA…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Medikuan</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Medikura</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Medikutik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">Vengo del trabajo. (Vengo DESDE…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Lanean</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Lanerara</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Lanetatik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">Estoy en el gimnasio. (Estoy EN…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Gimnasioan</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gimnasiora</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Gimnasiotik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-<!-- MÓDULO 3 -->
-<section id="modulo-3" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 3</span><h2>Aditz arruntak</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 1</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Verbos frecuentes</h2><ul><li><strong>joan</strong> (ir) → noa, zoaz, doa…</li><li><strong>etorri</strong> (venir) → nator, zatoz, dator…</li><li><strong>eduki</strong> (tener) · <strong>egin</strong> (hacer) · <strong>ibili</strong> (andar) · <strong>ikusi</strong> (ver)</li></ul></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-   <div class="ejercicio" data-correct="A">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">Yo voy. (Joan → yo)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Noa</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nator</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dator</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">Él viene. (Etorri → él)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zatoz</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nator</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dator</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">Tú vienes. (Etorri → tú)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Noa</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zatoz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dator</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">Nosotros vamos. (Joan → nosotros)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Goaz</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gatoz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Doaz</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">Ellos van. (Joan → ellos)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Noaz</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zatoz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Doaz</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">Yo tengo. (Eduki → yo)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Dut</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Daukat</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dauka</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">Él tiene. (Eduki → él)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Dauka</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Daukagu</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Daukate</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">Nosotros hacemos. (Egin → nosotros)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Egin dut</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Egin du</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Egin dugu</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">Yo veo. (Ikusi → yo)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Ikusten dut</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Ikusten du</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Ikusten dugu</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">Tú andas / caminas. (Ibili → tú)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Ibiliko dut</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Ibiliko zara</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Ibiliko gara</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-</section>
-
-<!-- MÓDULO 4 -->
-<section id="modulo-4" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 4</span><h2>Posesiboak</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 1</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Posesivos</h2><ul><li><strong>nire</strong> = mi · <strong>zure</strong> = tu · <strong>bere</strong> = su · <strong>gure</strong> = nuestro · <strong>zuen</strong> = vuestro · <strong>haien</strong> = su (de ellos)</li></ul></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-    <div class="ejercicio" data-correct="A">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">Mi casa. (¿Cómo se dice “mi”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nire</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zure</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Bere</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">Tu amigo. (¿Cómo se dice “tu”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nire</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zure</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Haien</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">Su coche (de él/ella). (¿Cómo se dice “su”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zuen</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nire</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Bere</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">Nuestra casa. (¿Cómo se dice “nuestro/a”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Gure</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zuen</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Haien</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">Vuestra amiga. (¿Cómo se dice “vuestra”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Bere</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zuen</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nire</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">Su casa (de ellos). (¿Cómo se dice “su” plural?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Bere</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zure</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Haien</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">Mi amigo está aquí. (Nire laguna ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dago</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>da</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>gaude</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">Tu coche es rojo. (Zure autoa ____ gorria da)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dago</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>da</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">Su amigo (de él) está contento. (Bere laguna ____ pozik dago)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dira</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">Nuestra amiga es simpática. (Gure laguna ____ atsegina da)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>oso</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>baina</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>gaude</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-<!-- MÓDULO 5 -->
-<section id="modulo-5" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 5</span><h2>Denbora eta ohiturak</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 1</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Tiempo y frecuencia</h2><ul><li><strong>gaur</strong> = hoy · <strong>bihar</strong> = mañana · <strong>atzo</strong> = ayer</li><li><strong>beti</strong> = siempre · <strong>inoiz ez</strong> = nunca · <strong>askotan</strong> = a menudo · <strong>batzuetan</strong> = a veces</li></ul></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-   <div class="ejercicio" data-correct="A">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">Hoy. (¿Cómo se dice “hoy”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Gaur</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Bihar</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Atzo</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">Mañana. (¿Cómo se dice “mañana”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Gaur</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Bihar</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Atzo</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">Ayer. (¿Cómo se dice “ayer”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Bihar</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gaur</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Atzo</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">Siempre. (¿Cómo se dice “siempre”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Beti</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Askotan</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Batzuetan</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">A menudo. (¿Cómo se dice “a menudo”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Beti</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Askotan</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Inoiz ez</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">Nunca. (¿Cómo se dice “nunca”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Beti</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Askotan</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Inoiz ez</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">A veces. (¿Cómo se dice “a veces”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Batzuetan</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Bihar</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dendan</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">Hoy estoy en casa. (Gaur etxean ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nago</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">Mañana voy a Bilbao. (Bihar Bilbora ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dago</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nator</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>noa</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">A menudo tomo café. (Askotan kafea ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>edaten dut</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>edaten du</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>edaten dugu</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-<!-- MÓDULO 6 -->
-<section id="modulo-6" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 6</span><h2>Galderak</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 1</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Interrogativos</h2><ul><li><strong>zer</strong> = qué · <strong>non</strong> = dónde · <strong>nora</strong> = adónde · <strong>nondik</strong> = de dónde</li><li><strong>noiz</strong> = cuándo · <strong>norekin</strong> = con quién · <strong>nola</strong> = cómo</li></ul></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-    <div class="ejercicio" data-correct="A">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">¿Qué? (¿Cómo se dice “qué”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zer</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nora</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Noiz</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">¿Dónde? (¿Cómo se dice “dónde”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nondik</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Non</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nola</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">¿Adónde? (¿Cómo se dice “adónde”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Noiz</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Norekin</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nora</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">¿Desde dónde? (¿Cómo se dice “desde dónde”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nondik</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nora</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Zer</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">¿Cuándo? (¿Cómo se dice “cuándo”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nola</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Noiz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nondik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">¿Con quién? (¿Cómo se dice “con quién”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nora</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Noiz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Norekin</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">¿Cómo? (¿Cómo se dice “cómo”?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nola</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nondik</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Zer</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">¿Dónde estás? (____ zaude?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nondik</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Non</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nora</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">¿Adónde vas? (____ zoaz?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nola</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Noiz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nora</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">¿Desde dónde vienes? (____ zatoz?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nondik</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Norekin</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Zer</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-<!-- MÓDULO 7 -->
-<section id="modulo-7" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 7</span><h2>Elkarrizketak</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 1</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Frases de conversación</h2><ul><li><strong>Kaixo!</strong> = ¡Hola! · <strong>Agur!</strong> = ¡Adiós!</li><li><strong>Zer moduz?</strong> = ¿Qué tal? · <strong>Mesedez</strong> = Por favor · <strong>Eskerrik asko</strong> = Gracias</li></ul></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-    <div class="ejercicio" data-correct="A">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “Hola” en euskera?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Kaixo</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Agur</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Egun on</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “Buenos días”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Arratsalde on</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gabon</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Egun on</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “Adiós”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Kaixo</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Agur</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Barkatu</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “¿Qué tal?”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zer moduz?</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nola zaude?</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nondik zara?</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “¿Cómo estás?”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zer moduz?</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nola zaude?</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Noiz zoaz?</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “Gracias”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Barkatu</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Mesedez</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Eskerrik asko</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “Por favor”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Mesedez</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Barkatu</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Agur</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “Perdón”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Egun on</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Barkatu</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Zer moduz?</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">¿Cómo se dice “Buenas tardes”?</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Egun on</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gabon</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Arratsalde on</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">Completa: — Kaixo! Zer moduz? — ____ ondo!</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Oso</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Baina</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Egun</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-<!-- MÓDULO 8 -->
-<section id="modulo-8" class="modulo">
-  <div class="modulo-header"><button class="back-btn" data-volver>← Volver</button><div class="modulo-header-info"><span>Módulo 8</span><h2>Praktika finala</h2></div></div>
-  <div class="progress-wrap"><span class="progress-label">Progreso</span><div class="progress-bar-outer"><div class="progress-bar-inner"></div></div><span class="progress-count">0 / 1</span></div>
-  <div class="teoria"><div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div><div class="teoria-body"><h2>Repaso global A1</h2><p>Mezcla de todo lo aprendido. ¡Aurrera!</p></div></div>
-  <div class="ejercicios-wrap" data-total="10">
-   <div class="ejercicio" data-correct="B">
-  <div class="ej-meta">Pregunta 1 de 10</div>
-  <div class="ej-pregunta">Estoy en casa. (Estoy EN…)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Etxera</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Etxean</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Etxetik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 2 de 10</div>
-  <div class="ej-pregunta">Voy a Bilbao. (Bilbo____ noa)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>tik</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>n</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>ra</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 3 de 10</div>
-  <div class="ej-pregunta">Vengo de la escuela. (Eskola____ nator)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>tik</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>ra</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>n</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 4 de 10</div>
-  <div class="ej-pregunta">Mi amigo está contento. (Nire laguna ____ pozik dago)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dira</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dago</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>gaude</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 5 de 10</div>
-  <div class="ej-pregunta">¿Dónde estás? (____ zaude?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nora</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Noiz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Non</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 6 de 10</div>
-  <div class="ej-pregunta">Nosotros somos estudiantes. (Gu ikasleak ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 7 de 10</div>
-  <div class="ej-pregunta">Tú vienes. (Etorri → tú)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Noa</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zatoz</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dator</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="C" style="display:none">
-  <div class="ej-meta">Pregunta 8 de 10</div>
-  <div class="ej-pregunta">A menudo tomo café. (Askotan kafea ____)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>edaten du</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>edaten dugu</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>edaten dut</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="A" style="display:none">
-  <div class="ej-meta">Pregunta 9 de 10</div>
-  <div class="ej-pregunta">¿Con quién vienes? (____ zatoz?)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Norekin</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nondik</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nola</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-
-<div class="ejercicio" data-correct="B" style="display:none">
-  <div class="ej-meta">Pregunta 10 de 10</div>
-  <div class="ej-pregunta">Ella está en la calle. (Hura kale____ dago)</div>
-  <div class="opciones-grid">
-    <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>ra</button>
-    <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>an</button>
-    <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>tik</button>
-  </div>
-  <p class="feedback"></p>
-</div>
-</section>
-
-</div><!-- /app -->
-
-<!-- ══ DICCIONARIO FAB ══ -->
+<!-- FAB Diccionario -->
 <button id="dic-fab">
   <svg id="fab-patxi" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="40" cy="75" rx="20" ry="12" fill="#5c3d1e"/>
@@ -2168,11 +325,10 @@ setTimeout(mostrarFrase, 1500);
     <ellipse cx="40" cy="26" rx="17" ry="9" fill="#222"/>
     <circle cx="40" cy="17" r="2.8" fill="#c9a84c"/>
   </svg>
-  Diccionario
+  Diccionario IA
 </button>
 
-
-<!-- ══ DICCIONARIO MODAL ══ -->
+<!-- Modal Diccionario -->
 <div id="dic-modal">
   <div class="dic-sheet">
     <div class="dic-header">
@@ -2188,7 +344,7 @@ setTimeout(mostrarFrase, 1500);
         <circle cx="35" cy="41" r="0.8" fill="white"/>
         <circle cx="47" cy="41" r="0.8" fill="white"/>
         <ellipse cx="40" cy="47" rx="2" ry="1.2" fill="#b8835a"/>
-        <path id="dic-mouth" d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
         <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
         <ellipse cx="22" cy="44" rx="4" ry="5" fill="#d4a574"/>
         <ellipse cx="58" cy="44" rx="4" ry="5" fill="#d4a574"/>
@@ -2198,43 +354,1269 @@ setTimeout(mostrarFrase, 1500);
         <circle cx="40" cy="16" r="3" fill="#c9a84c"/>
         <ellipse cx="40" cy="29" rx="20" ry="3" fill="rgba(0,0,0,0.15)"/>
       </svg>
-
       <div class="dic-header-text">
         <h2>Diccionario IA</h2>
-        <p>Solo vocabulario A1–A2. Euskera ↔ Castellano.</p>
+        <p>Euskera ↔ Castellano · Nivel A1–A2</p>
       </div>
-
       <button class="dic-close" id="dic-close">✕</button>
     </div>
-
     <div class="dic-input-row">
       <input type="text" id="dic-input" placeholder="etxea, pozik, joan…">
       <button id="dic-consultar">Buscar</button>
     </div>
-
     <div id="dic-respuesta" class="dic-respuesta"></div>
   </div>
 </div>
 
-<!-- bocadillo flotante del personaje -->
-<div id="patxi-bubble"></div>
+<!-- ══ MENÚ PRINCIPAL ══ -->
+<section id="menu-principal">
+  <p class="menu-intro">Elige un módulo. Empieza por el 0 y avanza progresivamente.</p>
+  <div class="modulos-grid">
+    <div class="modulo-card" data-modulo="0"><div class="card-num">Módulo 0</div><h3>Saludos básicos</h3><p>Kaixo, agur, egun on, eskerrik asko…</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="1"><div class="card-num">Módulo 1</div><h3>Vocabulario A1</h3><p>Números, colores, días, familia…</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="2"><div class="card-num">Módulo 2</div><h3>Izan (ser)</h3><p>Identidad, profesión, origen</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="3"><div class="card-num">Módulo 3</div><h3>Egon (estar)</h3><p>Ubicación y estados</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="4"><div class="card-num">Módulo 4</div><h3>Leku kasuak</h3><p>-n (en), -ra (hacia), -tik (desde)</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="5"><div class="card-num">Módulo 5</div><h3>Posesiboak</h3><p>nire, zure, bere, gure, zuen, haien</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="6"><div class="card-num">Módulo 6</div><h3>Aditz arruntak</h3><p>joan, etorri, eduki, egin…</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="7"><div class="card-num">Módulo 7</div><h3>Galderak eta denbora</h3><p>Interrogativos y tiempo</p><span class="card-check">✓</span></div>
+    <div class="modulo-card" data-modulo="8"><div class="card-num">Módulo 8</div><h3>Praktika finala</h3><p>Repaso global A1 – todo mezclado</p><span class="card-check">✓</span></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     MÓDULO 0 – Saludos básicos (más fácil)
+══════════════════════════════════ -->
+<section id="modulo-0" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 0</span><h2>Saludos básicos</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>Saludos y frases esenciales</h2>
+      <h3>Saludos</h3>
+      <ul>
+        <li><strong>Kaixo</strong> = Hola</li>
+        <li><strong>Agur</strong> = Adiós</li>
+        <li><strong>Egun on</strong> = Buenos días</li>
+        <li><strong>Arratsalde on</strong> = Buenas tardes</li>
+        <li><strong>Gabon</strong> = Buenas noches</li>
+      </ul>
+      <h3>Cortesía</h3>
+      <ul>
+        <li><strong>Eskerrik asko</strong> = Gracias</li>
+        <li><strong>Barkatu</strong> = Perdón / Disculpe</li>
+        <li><strong>Mesedez</strong> = Por favor</li>
+        <li><strong>Bai</strong> = Sí · <strong>Ez</strong> = No</li>
+      </ul>
+      <h3>Preguntas básicas</h3>
+      <ul>
+        <li><strong>Zer moduz?</strong> = ¿Qué tal?</li>
+        <li><strong>Nola zaude?</strong> = ¿Cómo estás?</li>
+        <li><strong>Oso ondo</strong> = Muy bien · <strong>Ongi</strong> = Bien</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="B">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Hola" en euskera?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Agur</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Kaixo</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Gabon</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Adiós"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Agur</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Kaixo</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Egun on</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Buenos días"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Gabon</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Arratsalde on</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Egun on</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Gracias"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Eskerrik asko</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Mesedez</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Barkatu</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Por favor"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Barkatu</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Mesedez</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Eskerrik asko</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Perdón"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Mesedez</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Agur</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Barkatu</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Sí"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Bai</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Ez</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Ondo</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "No"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Bai</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Ez</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Kaixo</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">¿Qué significa "Zer moduz?"</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>¿Qué tal?</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>¿Cómo te llamas?</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>¿De dónde eres?</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "Muy bien"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Ongi</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Bai</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Oso ondo</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 1 – Vocabulario A1 ══ -->
+<section id="modulo-1" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 1</span><h2>Vocabulario A1</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>Vocabulario esencial A1</h2>
+      <h3>Números</h3>
+      <ul>
+        <li><strong>bat</strong> = 1 · <strong>bi</strong> = 2 · <strong>hiru</strong> = 3 · <strong>lau</strong> = 4 · <strong>bost</strong> = 5</li>
+        <li><strong>sei</strong> = 6 · <strong>zazpi</strong> = 7 · <strong>zortzi</strong> = 8 · <strong>bederatzi</strong> = 9 · <strong>hamar</strong> = 10</li>
+      </ul>
+      <h3>Familia</h3>
+      <ul>
+        <li><strong>ama</strong> = madre · <strong>aita</strong> = padre · <strong>anaia</strong> = hermano · <strong>arreba</strong> = hermana</li>
+        <li><strong>laguna</strong> = amigo/a · <strong>neska</strong> = chica · <strong>mutila</strong> = chico</li>
+      </ul>
+      <h3>Cosas cotidianas</h3>
+      <ul>
+        <li><strong>etxea</strong> = la casa · <strong>autoa</strong> = el coche · <strong>liburua</strong> = el libro</li>
+        <li><strong>kafea</strong> = el café · <strong>ura</strong> = el agua</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="A">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">¿Qué significa "etxea"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>la casa</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>el coche</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>el libro</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "madre"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>aita</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>ama</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>anaia</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">¿Qué significa "hamar"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>5</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>7</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>10</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "padre"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>aita</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>ama</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>arreba</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">¿Qué significa "laguna"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>hermano</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>amigo/a</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>hermana</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "cinco"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>lau</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>sei</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>bost</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">¿Qué significa "liburua"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>el libro</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>el café</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>el agua</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "hermana"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>anaia</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>arreba</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>laguna</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">¿Qué significa "bi"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>1</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>3</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>2</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "el café"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>kafea</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>ura</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>autoa</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 2 – IZAN ══ -->
+<section id="modulo-2" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 2</span><h2>Izan (ser)</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>IZAN – ser</h2>
+      <p>Se usa para identidad, profesión, origen y características permanentes.</p>
+      <h3>Conjugación</h3>
+      <ul>
+        <li><strong>Ni naiz</strong> = yo soy</li>
+        <li><strong>Zu zara</strong> = tú eres</li>
+        <li><strong>Hura da</strong> = él/ella es</li>
+        <li><strong>Gu gara</strong> = nosotros somos</li>
+        <li><strong>Zuek zarete</strong> = vosotros sois</li>
+        <li><strong>Haiek dira</strong> = ellos/ellas son</li>
+      </ul>
+      <h3>Ejemplos</h3>
+      <ul>
+        <li><em>Ni irakaslea naiz</em> = Yo soy profesor/a</li>
+        <li><em>Hura medikua da</em> = Él/ella es médico</li>
+        <li><em>Zu Bilbokoa zara</em> = Tú eres de Bilbao</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="A">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">Yo soy. (Ni ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>zara</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">Tú eres. (Zu ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zara</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>da</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">Él/ella es. (Hura ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>naiz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>da</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">Nosotros somos. (Gu ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">Ellos son. (Haiek ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dira</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>gara</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">Yo soy profesor/a. (Ni irakaslea ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>nago</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zara</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>naiz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">Ella es médica. (Hura medikua ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>naiz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">Vosotros sois estudiantes. (Zuek ikasleak ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zaudete</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zarete</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">Tú eres de Bilbao. (Zu Bilbokoa ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zaude</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>naiz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>zara</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">Nosotros somos de Donostia. (Gu Donostiakoak ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 3 – EGON ══ -->
+<section id="modulo-3" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 3</span><h2>Egon (estar)</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>EGON – estar</h2>
+      <p>Se usa para ubicación, estados temporales y emociones.</p>
+      <h3>Conjugación</h3>
+      <ul>
+        <li><strong>Ni nago</strong> = yo estoy</li>
+        <li><strong>Zu zaude</strong> = tú estás</li>
+        <li><strong>Hura dago</strong> = él/ella está</li>
+        <li><strong>Gu gaude</strong> = nosotros estamos</li>
+        <li><strong>Zuek zaudete</strong> = vosotros estáis</li>
+        <li><strong>Haiek daude</strong> = ellos/ellas están</li>
+      </ul>
+      <h3>Ejemplos</h3>
+      <ul>
+        <li><em>Ni etxean nago</em> = Yo estoy en casa</li>
+        <li><em>Hura pozik dago</em> = Él/ella está contento/a</li>
+        <li><em>Gu lanean gaude</em> = Nosotros estamos en el trabajo</li>
+      </ul>
+      <h3>Truco</h3>
+      <p>Si puedes añadir "ahora" o "hoy" → usa <strong>EGON</strong>. Si puedes añadir "siempre" → usa <strong>IZAN</strong>.</p>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="B">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">Yo estoy. (Ni ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">Él/ella está. (Hura ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zaude</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">Tú estás. (Zu ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zaude</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zara</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>nago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">Nosotros estamos. (Gu ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">Ellos están. (Haiek ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>daude</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dira</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">Yo estoy en casa. (Ni etxean ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>da</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>nago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">Ella está contenta. (Hura pozik ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>naiz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">Vosotros estáis en casa. (Zuek etxean ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zaudete</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zarete</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>daude</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">Ella está cansada. (Hura nekatuta ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>naiz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">Nosotros estamos en el trabajo. (Gu lanean ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 4 – LEKU KASUAK ══ -->
+<section id="modulo-4" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 4</span><h2>Leku kasuak</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>Casos de lugar</h2>
+      <ul>
+        <li><strong>-n</strong> = EN (donde estás) → <em>etxean</em>, <em>kalean</em>, <em>dendan</em></li>
+        <li><strong>-ra</strong> = HACIA (dirección) → <em>etxera</em>, <em>kalera</em>, <em>dendara</em></li>
+        <li><strong>-tik</strong> = DESDE (origen) → <em>etxetik</em>, <em>kaletik</em>, <em>dendatik</em></li>
+      </ul>
+      <h3>Preguntas</h3>
+      <ul>
+        <li><strong>Non?</strong> (¿dónde?) → -n · <strong>Nora?</strong> (¿adónde?) → -ra · <strong>Nondik?</strong> (¿desde dónde?) → -tik</li>
+      </ul>
+      <h3>Regla de oro</h3>
+      <p>Estás quieto → <strong>-n</strong> · Te mueves hacia → <strong>-ra</strong> · Vienes de → <strong>-tik</strong></p>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="B">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">Estoy en casa. (Ni etxe____ nago)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>ra</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>an</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>tik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">Voy a casa. (Etxe____ noa)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>ra</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>an</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>tik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">Vengo de casa. (Etxe____ nator)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>an</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>ra</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>tik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">Estoy en la tienda. (Estoy EN…)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Dendan</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Dendara</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dendatik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">Voy a la escuela. (Voy HACIA…)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Eskolan</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Eskolara</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Eskolatik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">Vengo de la calle. (Vengo DESDE…)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Kalean</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Kalera</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Kaletik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">¿Dónde estás? (Non zaude?) – respuesta correcta:</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Parkean nago</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Parkera nago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Parketik nago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">¿Adónde vas? (Nora zoaz?) – respuesta correcta:</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Medikuan noa</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Medikura noa</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Medikutik noa</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">Vengo del trabajo. (Vengo DESDE…)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Lanean</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Lanera</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Lanetik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">Estoy en el gimnasio. (Estoy EN…)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Gimnasioan</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gimnasiora</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Gimnasiotik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 5 – POSESIBOAK ══ -->
+<section id="modulo-5" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 5</span><h2>Posesiboak</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>Posesivos</h2>
+      <ul>
+        <li><strong>nire</strong> = mi · <strong>zure</strong> = tu · <strong>bere</strong> = su (él/ella)</li>
+        <li><strong>gure</strong> = nuestro · <strong>zuen</strong> = vuestro · <strong>haien</strong> = su (ellos)</li>
+      </ul>
+      <h3>Regla importante</h3>
+      <p>El posesivo NO cambia por género ni número. <em>Nire laguna</em> = mi amigo/a.</p>
+      <h3>Ejemplos</h3>
+      <ul>
+        <li><em>nire etxea</em> = mi casa</li>
+        <li><em>zure autoa</em> = tu coche</li>
+        <li><em>bere laguna</em> = su amigo/a</li>
+        <li><em>gure familia</em> = nuestra familia</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="A">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">Mi casa. (____ etxea)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nire</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zure</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Bere</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">Tu amigo. (____ laguna)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nire</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zure</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Haien</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">Su coche (de él/ella). (____ autoa)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zuen</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nire</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Bere</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">Nuestra familia. (____ familia)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Gure</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zuen</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Haien</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">Vuestro libro. (____ liburua)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Bere</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zuen</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nire</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">Su casa (de ellos). (____ etxea)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Bere</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gure</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Haien</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">Mi amigo está aquí. (Nire laguna hemen ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dago</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>da</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>naiz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">Tu coche es rojo. (Zure autoa gorria ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dago</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>da</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">Su amigo (de él) está contento. (Bere laguna pozik ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>naiz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">Nuestra amiga es simpática. (Gure laguna atsegina ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 6 – ADITZ ARRUNTAK ══ -->
+<section id="modulo-6" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 6</span><h2>Aditz arruntak</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>Verbos frecuentes</h2>
+      <h3>Joan (ir)</h3>
+      <ul><li><em>ni noa</em> · <em>zu zoaz</em> · <em>hura doa</em> · <em>gu goaz</em> · <em>haiek doaz</em></li></ul>
+      <h3>Etorri (venir)</h3>
+      <ul><li><em>ni nator</em> · <em>zu zatoz</em> · <em>hura dator</em> · <em>gu gatoz</em> · <em>haiek datoz</em></li></ul>
+      <h3>Eduki (tener)</h3>
+      <ul><li><em>ni daukat</em> · <em>zu daukazu</em> · <em>hura dauka</em> · <em>gu daukagu</em></li></ul>
+      <h3>Egin (hacer) · Ibili (andar) · Ikusi (ver)</h3>
+      <ul><li>Se conjugan con auxiliar: <em>Egin dut</em> = lo he hecho · <em>Ikusten dut</em> = veo</li></ul>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="A">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">Yo voy. (Joan → yo)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Noa</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nator</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Doa</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">Él viene. (Etorri → él)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zatoz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nator</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dator</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">Tú vienes. (Etorri → tú)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nator</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Zatoz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Dator</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">Nosotros vamos. (Joan → nosotros)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Goaz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gatoz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Doaz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">Ellos van. (Joan → ellos)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Goaz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gatoz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Doaz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">Yo tengo. (Eduki → yo)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Dauka</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Daukat</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Daukagu</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">Él tiene. (Eduki → él)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Dauka</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Daukat</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Daukate</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">Yo veo. (Ikusi → yo, presente)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Ikusten du</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Ikusten dugu</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Ikusten dut</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">Nosotros hacemos. (Egin → nosotros)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Egin dugu</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Egin dut</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Egin du</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">Yo vengo de Bilbao. (Bilbotik ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>noa</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nator</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>nago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 7 – GALDERAK ETA DENBORA ══ -->
+<section id="modulo-7" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 7</span><h2>Galderak eta denbora</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>Interrogativos y tiempo</h2>
+      <h3>Interrogativos</h3>
+      <ul>
+        <li><strong>zer</strong> = qué · <strong>non</strong> = dónde · <strong>nora</strong> = adónde · <strong>nondik</strong> = de dónde</li>
+        <li><strong>noiz</strong> = cuándo · <strong>norekin</strong> = con quién · <strong>nola</strong> = cómo · <strong>nor</strong> = quién</li>
+      </ul>
+      <h3>Tiempo</h3>
+      <ul>
+        <li><strong>gaur</strong> = hoy · <strong>bihar</strong> = mañana · <strong>atzo</strong> = ayer</li>
+      </ul>
+      <h3>Frecuencia</h3>
+      <ul>
+        <li><strong>beti</strong> = siempre · <strong>inoiz ez</strong> = nunca · <strong>askotan</strong> = a menudo · <strong>batzuetan</strong> = a veces</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="A">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "cuándo"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Noiz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nora</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nola</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "con quién"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nor</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Norekin</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nondik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "cómo"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Zer</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Non</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nola</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "ayer"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Atzo</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Gaur</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Bihar</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "siempre"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Askotan</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Beti</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Batzuetan</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">¿Cómo se dice "nunca"?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Beti</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Askotan</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Inoiz ez</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">¿Dónde estás? (Non zaude?) — ¿qué interrogativo usas?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Non</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Nora</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Nondik</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">Hoy estoy en casa. (Gaur etxean ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>naiz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>nago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>da</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">A menudo tomo café. (Askotan kafea ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>edaten du</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>edaten dugu</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>edaten dut</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">¿Adónde vas mañana? — ¿qué interrogativo usas?</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>Nora</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>Non</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>Noiz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MÓDULO 8 – PRAKTIKA FINALA (más difícil) ══ -->
+<section id="modulo-8" class="modulo">
+  <div class="modulo-header">
+    <button class="back-btn" data-volver>← Volver</button>
+    <div class="modulo-header-info"><span>Módulo 8</span><h2>Praktika finala</h2></div>
+  </div>
+  <div class="progress-wrap">
+    <span class="progress-label">Progreso</span>
+    <div class="progress-bar-outer"><div class="progress-bar-inner"></div></div>
+    <span class="progress-count">0 / 10</span>
+  </div>
+  <div class="teoria">
+    <div class="teoria-toggle"><h3>📖 Teoría</h3><span class="chevron">▼</span></div>
+    <div class="teoria-body">
+      <h2>Repaso global A1</h2>
+      <p>Este módulo mezcla todo: verbos, casos, posesivos, interrogativos, ser/estar. Lee bien cada frase antes de responder.</p>
+      <ul>
+        <li>EGON → ubicación y estados · IZAN → identidad y profesión</li>
+        <li>-n (en) · -ra (hacia) · -tik (desde)</li>
+        <li>nire/zure/bere/gure/zuen/haien</li>
+        <li>joan/etorri/eduki/egin/ikusi</li>
+      </ul>
+    </div>
+  </div>
+  <div class="ejercicios-wrap">
+    <div class="ejercicio" data-correct="B">
+      <div class="ej-meta">Pregunta 1 de 10</div>
+      <div class="ej-pregunta">Hoy vengo de casa y voy a la escuela. (Gaur etxetik nator eta eskolara ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>nago</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>noa</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>nator</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 2 de 10</div>
+      <div class="ej-pregunta">Mi amiga está contenta y es médica. (Nire laguna pozik dago eta medikua ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 3 de 10</div>
+      <div class="ej-pregunta">¿Adónde van ellos a menudo? (Haiek askotan nora ____?)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>datoz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>daude</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>doaz</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 4 de 10</div>
+      <div class="ej-pregunta">Vuestra amiga siempre viene desde Bilbao. (Zuen laguna beti Bilbotik ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>doa</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dator</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 5 de 10</div>
+      <div class="ej-pregunta">¿Con quién vienes tú? (Zu norekin ____?)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>zatoz</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>zoaz</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>zaude</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 6 de 10</div>
+      <div class="ej-pregunta">Su coche (de ellos) nunca está en casa. (Haien autoa inoiz ez ____ etxean)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>da</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dira</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 7 de 10</div>
+      <div class="ej-pregunta">A veces nosotros vemos a nuestros amigos. (Batzuetan gure lagunak ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>ikusten dut</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>ikusten ditugu</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>ikusten du</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="A" style="display:none">
+      <div class="ej-meta">Pregunta 8 de 10</div>
+      <div class="ej-pregunta">¿Desde dónde viene tu padre? (Zure aita nondik ____?)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dator</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>doa</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dago</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="C" style="display:none">
+      <div class="ej-meta">Pregunta 9 de 10</div>
+      <div class="ej-pregunta">Ayer mi hermana fue al médico. (Atzo nire arreba medikura ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>dator</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>dago</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>joan zen</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+    <div class="ejercicio" data-correct="B" style="display:none">
+      <div class="ej-meta">Pregunta 10 de 10</div>
+      <div class="ej-pregunta">Nosotros somos de aquí y siempre estamos en casa. (Gu hemengoak gara eta beti etxean ____)</div>
+      <div class="opciones-grid">
+        <button class="opcion" data-opcion="A"><span class="opcion-letter">A</span>gara</button>
+        <button class="opcion" data-opcion="B"><span class="opcion-letter">B</span>gaude</button>
+        <button class="opcion" data-opcion="C"><span class="opcion-letter">C</span>dira</button>
+      </div>
+      <p class="feedback"></p>
+    </div>
+  </div>
+</section>
+
+</div><!-- .app -->
 
 <script>
-// ── FRASES DE PATXI ──────────────────────────────
+// ═══════════════════════════════════════
+// PATXI – frases y bocadillo
+// ═══════════════════════════════════════
 const frases = [
   "¡Kaixo! Soy Patxi, tu guía vasco. 🧢",
   "Recuerda: EGON para ubicación, IZAN para identidad.",
-  "¡Oso ondo! Sigue así, ¡campeón/a!",
-  "¿Dudas con una palabra? Usa el diccionario 👇",
-  "etxean = en casa · etxera = hacia casa · etxetik = desde casa",
-  "Beti = siempre. Inoiz ez = nunca. ¡No los confundas!",
+  "¡Oso ondo! ¡Sigue así!",
+  "¿Dudas con una palabra? Usa el diccionario IA 👇",
+  "etxean = en casa · etxera = a casa · etxetik = desde casa",
+  "Beti = siempre. Inoiz ez = nunca.",
   "Kaixo = hola · Agur = adiós. ¡Lo más básico!",
-  "Ni nago = estoy (yo). Ni naiz = soy (yo). ¡Fácil!",
+  "Ni nago = estoy (yo). Ni naiz = soy (yo).",
 ];
 
 let fraseIdx = 0;
 const bubble = document.getElementById('patxi-bubble');
-const patxiFab = document.getElementById('fab-patxi');
+const patxiSvg = document.getElementById('patxi-svg');
 
 function mostrarFrase() {
   bubble.textContent = frases[fraseIdx % frases.length];
@@ -2243,134 +1625,167 @@ function mostrarFrase() {
   setTimeout(() => bubble.classList.remove('visible'), 4000);
 }
 
-// Patxi habla al pulsar el FAB
-patxiFab.addEventListener('click', mostrarFrase);
-
-// Saludo inicial
+patxiSvg.addEventListener('click', mostrarFrase);
 setTimeout(mostrarFrase, 1500);
 
+// ═══════════════════════════════════════
+// NAVEGACIÓN MÓDULOS
+// ═══════════════════════════════════════
+const menuPrincipal = document.getElementById('menu-principal');
+const modulos = document.querySelectorAll('.modulo');
+const completed = new Set(JSON.parse(localStorage.getItem('euskera-completed') || '[]'));
 
-// ── ESTADO ────────────────────────────────────────
-const completedModules = new Set(
-  JSON.parse(localStorage.getItem('euskera_completed') || '[]')
-);
-
-// ── NAVEGACIÓN ────────────────────────────────────
-const menu = document.getElementById('menu-principal');
-const allModulos = document.querySelectorAll('.modulo');
-
-function markCompleted(id) {
-  completedModules.add(id);
-  localStorage.setItem('euskera_completed', JSON.stringify([...completedModules]));
-  const card = document.querySelector(`.modulo-card[data-modulo="${id}"]`);
-  if (card) card.classList.add('completed');
+function marcarCompletados() {
+  document.querySelectorAll('.modulo-card').forEach(card => {
+    const id = parseInt(card.dataset.modulo);
+    if (completed.has(id)) card.classList.add('completed');
+  });
 }
-
-completedModules.forEach(id => {
-  const card = document.querySelector(`.modulo-card[data-modulo="${id}"]`);
-  if (card) card.classList.add('completed');
-});
+marcarCompletados();
 
 document.querySelectorAll('.modulo-card').forEach(card => {
   card.addEventListener('click', () => {
-    menu.style.display = 'none';
-    allModulos.forEach(m => m.style.display = 'none');
-    document.getElementById('modulo-' + card.dataset.modulo).style.display = 'block';
-    window.scrollTo(0, 0);
+    const id = card.dataset.modulo;
+    menuPrincipal.style.display = 'none';
+    const sec = document.getElementById('modulo-' + id);
+    sec.style.display = 'block';
+    iniciarModulo(sec);
   });
 });
 
 document.querySelectorAll('[data-volver]').forEach(btn => {
   btn.addEventListener('click', () => {
-    allModulos.forEach(m => m.style.display = 'none');
-    menu.style.display = 'block';
-    window.scrollTo(0, 0);
+    modulos.forEach(m => m.style.display = 'none');
+    menuPrincipal.style.display = 'block';
+    marcarCompletados();
   });
 });
 
-// ── TEORÍA TOGGLE ─────────────────────────────────
-document.querySelectorAll('.teoria-toggle').forEach(toggle => {
-  toggle.addEventListener('click', () => {
-    const body = toggle.nextElementSibling;
-    const open = body.style.display === 'block';
-    body.style.display = open ? 'none' : 'block';
-    toggle.classList.toggle('open', !open);
+// ═══════════════════════════════════════
+// LÓGICA DE EJERCICIOS
+// ═══════════════════════════════════════
+function iniciarModulo(sec) {
+  const ejerciciosList = sec.querySelectorAll('.ejercicio');
+  const total = ejerciciosList.length; // siempre cuenta los reales
+  const barInner = sec.querySelector('.progress-bar-inner');
+  const countEl = sec.querySelector('.progress-count');
+  let acertadas = 0;
+
+  // Mostrar solo la primera, ocultar el resto
+  ejerciciosList.forEach((ej, i) => {
+    ej.style.display = i === 0 ? 'block' : 'none';
+    // Reset estado
+    ej.classList.remove('correct-anim', 'error-anim');
+    ej.querySelectorAll('.opcion').forEach(op => {
+      op.classList.remove('correct', 'wrong');
+      op.disabled = false;
+    });
+    ej.querySelector('.feedback').textContent = '';
+    ej.querySelector('.feedback').className = 'feedback';
   });
-});
 
-// ── EJERCICIOS ────────────────────────────────────
-function updateProgress(modulo, current, total) {
-  modulo.querySelector('.progress-bar-inner').style.width = (current / total * 100) + '%';
-  modulo.querySelector('.progress-count').textContent = current + ' / ' + total;
-}
+  countEl.textContent = `0 / ${total}`;
+  barInner.style.width = '0%';
 
-document.querySelectorAll('.modulo').forEach(modulo => {
-  const wrap = modulo.querySelector('.ejercicios-wrap');
-  if (!wrap) return;
-  const total = parseInt(wrap.dataset.total) || 0;
-  const ejercicios = wrap.querySelectorAll('.ejercicio');
-  let done = 0;
+  // Eliminar pantalla de completado si existe
+  const completadoAnterior = sec.querySelector('.modulo-complete');
+  if (completadoAnterior) completadoAnterior.remove();
 
-  ejercicios.forEach((ej, index) => {
-    const correct = ej.dataset.correct;
+  let actual = 0;
+
+  function activarEjercicio(idx) {
+    if (idx >= total) {
+      mostrarCompletado(sec, total);
+      const moduloId = parseInt(sec.id.replace('modulo-', ''));
+      completed.add(moduloId);
+      localStorage.setItem('euskera-completed', JSON.stringify([...completed]));
+      return;
+    }
+    ejerciciosList[idx].style.display = 'block';
+    ejerciciosList[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  ejerciciosList.forEach((ej, idx) => {
+    const correcta = ej.dataset.correct;
     const feedback = ej.querySelector('.feedback');
-    const opciones = ej.querySelectorAll('.opcion');
+    ej.querySelectorAll('.opcion').forEach(btn => {
+      btn.addEventListener('click', function handler() {
+        if (this.disabled) return;
+        const elegida = this.dataset.opcion;
+        // Deshabilitar todas
+        ej.querySelectorAll('.opcion').forEach(op => op.disabled = true);
 
-    opciones.forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (btn.disabled) return;
-        opciones.forEach(b => b.disabled = true);
-
-        if (btn.dataset.opcion === correct) {
-          btn.classList.add('correct');
-          feedback.textContent = '✓ Oso ondo!';
-          feedback.className = 'feedback ok';
+        if (elegida === correcta) {
+          this.classList.add('correct');
           ej.classList.add('correct-anim');
-          done++;
-          updateProgress(modulo, done, total);
-
-          const next = ejercicios[index + 1];
-          if (next) {
-            setTimeout(() => {
-              ej.style.display = 'none';
-              next.style.display = 'block';
-              window.scrollTo({ top: next.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
-            }, 700);
-          } else {
-            setTimeout(() => {
-              wrap.innerHTML = `<div class="modulo-complete">
-                <div class="big-emoji">🎉</div>
-                <h3>¡Oso ondo! Módulo amaituta.</h3>
-                <p>Has completado todos los ejercicios de este módulo.</p>
-                <button class="btn-volver-complete">Volver al menú</button>
-              </div>`;
-              wrap.querySelector('.btn-volver-complete').addEventListener('click', () => {
-                allModulos.forEach(m => m.style.display = 'none');
-                menu.style.display = 'block';
-                window.scrollTo(0, 0);
-              });
-              markCompleted(modulo.id.replace('modulo-', ''));
-            }, 600);
-          }
+          feedback.textContent = '✓ ¡Correcto!';
+          feedback.className = 'feedback ok';
+          acertadas++;
+          countEl.textContent = `${acertadas} / ${total}`;
+          barInner.style.width = `${(acertadas / total) * 100}%`;
+          actual++;
+          setTimeout(() => {
+            ej.style.display = 'none';
+            activarEjercicio(actual);
+          }, 900);
         } else {
-          btn.classList.add('wrong');
-          feedback.textContent = '✗ Ez da zuzena. Saiatu berriro.';
-          feedback.className = 'feedback error';
+          this.classList.add('wrong');
+          ej.classList.remove('correct-anim');
           ej.classList.add('error-anim');
+          // Mostrar la correcta
+          ej.querySelectorAll('.opcion').forEach(op => {
+            if (op.dataset.opcion === correcta) op.classList.add('correct');
+          });
+          feedback.textContent = '✗ Incorrecto — inténtalo de nuevo';
+          feedback.className = 'feedback error';
           setTimeout(() => {
             ej.classList.remove('error-anim');
-            btn.classList.remove('wrong');
-            opciones.forEach(b => { b.disabled = false; });
+            // Reset para reintentar
+            ej.querySelectorAll('.opcion').forEach(op => {
+              op.classList.remove('correct', 'wrong');
+              op.disabled = false;
+            });
             feedback.textContent = '';
             feedback.className = 'feedback';
-          }, 900);
+          }, 1200);
         }
       });
     });
   });
+}
+
+function mostrarCompletado(sec, total) {
+  const wrap = sec.querySelector('.ejercicios-wrap');
+  const div = document.createElement('div');
+  div.className = 'modulo-complete';
+  div.innerHTML = `
+    <div class="big-emoji">🎉</div>
+    <h3>¡Módulo completado!</h3>
+    <p>Has acertado las ${total} preguntas. ¡Oso ondo!</p>
+    <button class="btn-volver-complete">← Volver al menú</button>
+  `;
+  wrap.appendChild(div);
+  div.querySelector('.btn-volver-complete').addEventListener('click', () => {
+    modulos.forEach(m => m.style.display = 'none');
+    menuPrincipal.style.display = 'block';
+    marcarCompletados();
+  });
+}
+
+// ═══════════════════════════════════════
+// TEORÍA TOGGLE
+// ═══════════════════════════════════════
+document.querySelectorAll('.teoria-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    const body = toggle.nextElementSibling;
+    body.classList.toggle('open');
+  });
 });
 
-// ── DICCIONARIO (API GROQ) ────────────────────────
+// ═══════════════════════════════════════
+// DICCIONARIO IA – Cloudflare Worker
+// ═══════════════════════════════════════
 const dicFab = document.getElementById('dic-fab');
 const dicModal = document.getElementById('dic-modal');
 const dicClose = document.getElementById('dic-close');
@@ -2378,54 +1793,54 @@ const dicInput = document.getElementById('dic-input');
 const dicConsultar = document.getElementById('dic-consultar');
 const dicRespuesta = document.getElementById('dic-respuesta');
 
-// Abrir modal
 dicFab.addEventListener('click', () => {
   dicModal.classList.add('open');
-  dicInput.value = '';
-  dicRespuesta.className = 'dic-respuesta';
-  dicRespuesta.innerHTML = '';
-  setTimeout(() => dicInput.focus(), 100);
+  dicInput.focus();
 });
+dicClose.addEventListener('click', () => dicModal.classList.remove('open'));
+dicModal.addEventListener('click', e => { if (e.target === dicModal) dicModal.classList.remove('open'); });
 
-// Cerrar modal
-function closeDic() { dicModal.classList.remove('open'); }
-dicClose.addEventListener('click', closeDic);
-dicModal.addEventListener('click', e => { if (e.target === dicModal) closeDic(); });
+dicInput.addEventListener('keydown', e => { if (e.key === 'Enter') consultar(); });
+dicConsultar.addEventListener('click', consultar);
 
-// Consultar API
 async function consultar() {
-  const texto = dicInput.value.trim();
-  if (!texto) return;
+  const palabra = dicInput.value.trim();
+  if (!palabra) return;
 
+  dicConsultar.disabled = true;
+  dicConsultar.textContent = '…';
   dicRespuesta.className = 'dic-respuesta visible';
   dicRespuesta.textContent = 'Patxi está buscando…';
 
+  const prompt = `Eres un diccionario de euskera para nivel A1-A2. El usuario consulta: "${palabra}".
+Responde SIEMPRE en este formato exacto:
+- Si es euskera: da la traducción al castellano, la categoría gramatical, y un ejemplo de frase sencilla.
+- Si es castellano: da la traducción al euskera, la categoría gramatical, y un ejemplo de frase sencilla.
+- Si no existe o no es nivel A1-A2: explica brevemente.
+Respuesta concisa, máximo 5 líneas. Sin markdown.`;
+
   try {
-    const res = await fetch(
-      "https://grokapi.joniturbu.workers.dev/?q=" + encodeURIComponent(texto)
-    );
+    const res = await fetch('https://grokapi.joniturbu.workers.dev', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+
+    if (!res.ok) throw new Error('Error de red: ' + res.status);
 
     const data = await res.json();
-
-    if (data.error) {
-      dicRespuesta.innerHTML = `<p>No encontrado.</p>`;
-      return;
-    }
-
-    dicRespuesta.innerHTML = `
-      <h3>${data.palabra}</h3>
-      <p><strong>ES:</strong> ${data.es}</p>
-      <p><strong>EUS:</strong> ${data.eu}</p>
-    `;
+    const texto = data.choices?.[0]?.message?.content || 'Sin respuesta.';
+    dicRespuesta.textContent = texto;
   } catch (err) {
-    dicRespuesta.innerHTML = `<p>Error al conectar con la API.</p>`;
+    dicRespuesta.textContent = '⚠️ Error al conectar con el diccionario. Revisa tu conexión.';
+    console.error(err);
+  } finally {
+    dicConsultar.disabled = false;
+    dicConsultar.textContent = 'Buscar';
   }
 }
-
-dicConsultar.addEventListener('click', consultar);
-dicInput.addEventListener('keydown', e => { if (e.key === 'Enter') consultar(); });
 </script>
 </body>
 </html>
-
-
