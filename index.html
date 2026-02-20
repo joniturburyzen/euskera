@@ -2150,7 +2150,7 @@ setTimeout(mostrarFrase, 1500);
 
 <!-- ══ DICCIONARIO FAB ══ -->
 <button id="dic-fab">
-  <svg id="fab-hamish" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+  <svg id="fab-patxi" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
     <ellipse cx="40" cy="75" rx="20" ry="12" fill="#5c3d1e"/>
     <rect x="20" y="62" width="40" height="16" rx="4" fill="#5c3d1e"/>
     <rect x="34" y="62" width="12" height="14" fill="#f5f0e8"/>
@@ -2171,11 +2171,12 @@ setTimeout(mostrarFrase, 1500);
   Diccionario
 </button>
 
+
 <!-- ══ DICCIONARIO MODAL ══ -->
 <div id="dic-modal">
   <div class="dic-sheet">
     <div class="dic-header">
-      <svg id="dic-hamish-big" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+      <svg id="dic-patxi-big" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="40" cy="75" rx="22" ry="14" fill="#3b2a1a"/>
         <rect x="18" y="60" width="44" height="18" rx="4" fill="#3b2a1a"/>
         <rect x="34" y="60" width="12" height="16" fill="#f5f0e8"/>
@@ -2197,25 +2198,30 @@ setTimeout(mostrarFrase, 1500);
         <circle cx="40" cy="16" r="3" fill="#c9a84c"/>
         <ellipse cx="40" cy="29" rx="20" ry="3" fill="rgba(0,0,0,0.15)"/>
       </svg>
+
       <div class="dic-header-text">
         <h2>Diccionario IA</h2>
         <p>Solo vocabulario A1–A2. Euskera ↔ Castellano.</p>
       </div>
+
       <button class="dic-close" id="dic-close">✕</button>
     </div>
+
     <div class="dic-input-row">
       <input type="text" id="dic-input" placeholder="etxea, pozik, joan…">
       <button id="dic-consultar">Buscar</button>
     </div>
+
     <div id="dic-respuesta" class="dic-respuesta"></div>
   </div>
 </div>
 
 <!-- bocadillo flotante del personaje -->
-<div id="hamish-bubble"></div>
+<div id="patxi-bubble"></div>
 
 <script>
-// ── FRASES DE HAMISH ──────────────────────────────
+
+// ── FRASES DE PATXI ──────────────────────────────
 const frases = [
   "¡Kaixo! Soy Patxi, tu guía vasco. 🧢",
   "Recuerda: EGON para ubicación, IZAN para identidad.",
