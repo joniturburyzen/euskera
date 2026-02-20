@@ -58,93 +58,154 @@ body::before {
 /* ════════════════════════════════════
    HEADER
 ════════════════════════════════════ */
-.site-header {
-  background: var(--brown);
-  margin: 0 -1.25rem 2.5rem;
-  padding: 1.25rem 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  border-bottom: 4px solid var(--gold);
-  position: relative;
-  overflow: hidden;
-}
-.site-header::after {
-  content: '';
-  position: absolute;
-  bottom: -2px; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold2), transparent);
-}
-.header-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  font-weight: 900;
-  color: var(--cream);
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-.header-text h1 span { color: var(--gold2); }
-.header-text p {
-  font-size: 0.78rem;
-  color: var(--stone);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  margin-top: 0.25rem;
+<header class="site-header">
+  <div id="patxi-container">
+    <svg id="patxi-svg" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+      <!-- Cuerpo / chaqueta -->
+      <ellipse cx="40" cy="75" rx="22" ry="14" fill="#3b2a1a"/>
+      <rect x="18" y="60" width="44" height="18" rx="4" fill="#3b2a1a"/>
+      <!-- Camisa blanca interior -->
+      <rect x="34" y="60" width="12" height="16" fill="#f5f0e8"/>
+      <!-- Corbata verde -->
+      <polygon points="40,62 37,68 40,66 43,68" fill="#2d6a3f"/>
+      <!-- Cuello -->
+      <rect x="33" y="55" width="14" height="8" rx="2" fill="#d4a574"/>
+      <!-- Cabeza -->
+      <ellipse cx="40" cy="44" rx="18" ry="20" fill="#d4a574"/>
+      <!-- Cara - ojos -->
+      <ellipse cx="34" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
+      <ellipse cx="46" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
+      <!-- Brillo ojos -->
+      <circle cx="35" cy="41" r="0.8" fill="white"/>
+      <circle cx="47" cy="41" r="0.8" fill="white"/>
+      <!-- Nariz -->
+      <ellipse cx="40" cy="47" rx="2" ry="1.2" fill="#b8835a"/>
+      <!-- Boca -->
+      <path id="patxi-mouth" d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <!-- Bigote -->
+      <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <!-- Orejas -->
+      <ellipse cx="22" cy="44" rx="4" ry="5" fill="#d4a574"/>
+      <ellipse cx="58" cy="44" rx="4" ry="5" fill="#d4a574"/>
+      <!-- Txapela -->
+      <ellipse cx="40" cy="27" rx="22" ry="6" fill="#1a1a1a"/>
+      <ellipse cx="40" cy="25" rx="18" ry="10" fill="#222"/>
+      <ellipse cx="40" cy="23" rx="14" ry="8" fill="#2a2a2a"/>
+      <!-- Pompón -->
+      <circle cx="40" cy="16" r="3" fill="#c9a84c"/>
+      <!-- Sombra -->
+      <ellipse cx="40" cy="29" rx="20" ry="3" fill="rgba(0,0,0,0.15)"/>
+    </svg>
+  </div>
+
+  <div class="header-text">
+    <h1>Euskera <span>A1</span></h1>
+    <p>Curso práctico · 9 módulos · Para Ángela</p>
+  </div>
+</header>
+
+<!-- Bocadillo flotante de Patxi -->
+<div id="patxi-bubble"></div>
+
+<!-- FAB del diccionario -->
+<button id="dic-fab">
+  <svg id="fab-patxi" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="40" cy="75" rx="20" ry="12" fill="#5c3d1e"/>
+    <rect x="20" y="62" width="40" height="16" rx="4" fill="#5c3d1e"/>
+    <rect x="34" y="62" width="12" height="14" fill="#f5f0e8"/>
+    <rect x="33" y="57" width="14" height="7" rx="2" fill="#d4a574"/>
+    <ellipse cx="40" cy="45" rx="17" ry="19" fill="#d4a574"/>
+    <ellipse cx="34" cy="43" rx="2.2" ry="2.6" fill="#3b2a1a"/>
+    <ellipse cx="46" cy="43" rx="2.2" ry="2.6" fill="#3b2a1a"/>
+    <circle cx="35" cy="42" r="0.7" fill="white"/>
+    <circle cx="47" cy="42" r="0.7" fill="white"/>
+    <path d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+    <ellipse cx="23" cy="45" rx="3.5" ry="4.5" fill="#d4a574"/>
+    <ellipse cx="57" cy="45" rx="3.5" ry="4.5" fill="#d4a574"/>
+    <ellipse cx="40" cy="28" rx="21" ry="5.5" fill="#1a1a1a"/>
+    <ellipse cx="40" cy="26" rx="17" ry="9" fill="#222"/>
+    <circle cx="40" cy="17" r="2.8" fill="#c9a84c"/>
+  </svg>
+  Diccionario
+</button>
+
+<!-- Modal del diccionario -->
+<div id="dic-modal">
+  <div class="dic-sheet">
+    <div class="dic-header">
+      <svg id="dic-patxi-big" viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+        <!-- (SVG grande de Patxi, idéntico al original salvo el ID) -->
+        <ellipse cx="40" cy="75" rx="22" ry="14" fill="#3b2a1a"/>
+        <rect x="18" y="60" width="44" height="18" rx="4" fill="#3b2a1a"/>
+        <rect x="34" y="60" width="12" height="16" fill="#f5f0e8"/>
+        <polygon points="40,62 37,68 40,66 43,68" fill="#2d6a3f"/>
+        <rect x="33" y="55" width="14" height="8" rx="2" fill="#d4a574"/>
+        <ellipse cx="40" cy="44" rx="18" ry="20" fill="#d4a574"/>
+        <ellipse cx="34" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
+        <ellipse cx="46" cy="42" rx="2.5" ry="3" fill="#3b2a1a"/>
+        <circle cx="35" cy="41" r="0.8" fill="white"/>
+        <circle cx="47" cy="41" r="0.8" fill="white"/>
+        <ellipse cx="40" cy="47" rx="2" ry="1.2" fill="#b8835a"/>
+        <path id="dic-mouth" d="M35 52 Q40 56 45 52" stroke="#8b5e3c" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        <path d="M33 50 Q37 48 40 50 Q43 48 47 50" stroke="#5c3d1e" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="22" cy="44" rx="4" ry="5" fill="#d4a574"/>
+        <ellipse cx="58" cy="44" rx="4" ry="5" fill="#d4a574"/>
+        <ellipse cx="40" cy="27" rx="22" ry="6" fill="#1a1a1a"/>
+        <ellipse cx="40" cy="25" rx="18" ry="10" fill="#222"/>
+        <ellipse cx="40" cy="23" rx="14" ry="8" fill="#2a2a2a"/>
+        <circle cx="40" cy="16" r="3" fill="#c9a84c"/>
+        <ellipse cx="40" cy="29" rx="20" ry="3" fill="rgba(0,0,0,0.15)"/>
+      </svg>
+
+      <div class="dic-header-text">
+        <h2>Diccionario IA</h2>
+        <p>Solo vocabulario A1–A2. Euskera ↔ Castellano.</p>
+      </div>
+
+      <button class="dic-close" id="dic-close">✕</button>
+    </div>
+
+    <div class="dic-input-row">
+      <input type="text" id="dic-input" placeholder="etxea, pozik, joan…">
+      <button id="dic-consultar">Buscar</button>
+    </div>
+
+    <div id="dic-respuesta" class="dic-respuesta"></div>
+  </div>
+</div>
+
+<!-- JS de Patxi -->
+<script>
+// ── FRASES DE PATXI ───────────────────────────────
+const frases = [
+  "¡Kaixo! Soy Patxi, tu guía vasco. 🧢",
+  "Recuerda: EGON para ubicación, IZAN para identidad.",
+  "¡Oso ondo! Sigue así, ¡campeón/a!",
+  "¿Dudas con una palabra? Usa el diccionario 👇",
+  "etxean = en casa · etxera = hacia casa · etxetik = desde casa",
+  "Beti = siempre. Inoiz ez = nunca. ¡No los confundas!",
+  "Kaixo = hola · Agur = adiós. ¡Lo más básico!",
+  "Ni nago = estoy (yo). Ni naiz = soy (yo). ¡Fácil!",
+];
+
+let fraseIdx = 0;
+const bubble = document.getElementById('patxi-bubble');
+const patxiSvg = document.getElementById('patxi-svg');
+
+function mostrarFrase() {
+  bubble.textContent = frases[fraseIdx % frases.length];
+  bubble.classList.add('visible');
+  fraseIdx++;
+  setTimeout(() => bubble.classList.remove('visible'), 4000);
 }
 
-/* ════════════════════════════════════
-   HAMISH – personaje con boina
-════════════════════════════════════ */
-#hamish-container {
-  flex-shrink: 0;
-  width: 72px;
-  height: 72px;
-  position: relative;
-}
-#hamish-svg {
-  width: 72px;
-  height: 72px;
-  animation: hamish-float 3s ease-in-out infinite;
-  transform-origin: center bottom;
-  cursor: pointer;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
-}
-@keyframes hamish-float {
-  0%,100% { transform: translateY(0) rotate(0deg); }
-  30%      { transform: translateY(-4px) rotate(-1.5deg); }
-  70%      { transform: translateY(-2px) rotate(1deg); }
-}
-#hamish-svg.talking {
-  animation: hamish-talk 0.18s ease infinite alternate;
-}
-@keyframes hamish-talk {
-  from { transform: scaleY(1); }
-  to   { transform: scaleY(1.03) translateY(-1px); }
-}
-/* Bocadillo del personaje */
-#hamish-bubble {
-  position: fixed;
-  bottom: 120px;
-  right: 1.25rem;
-  background: white;
-  border: 2px solid var(--brown2);
-  border-radius: 16px 16px 4px 16px;
-  padding: 0.75rem 1rem;
-  max-width: 240px;
-  font-size: 0.82rem;
-  color: var(--text);
-  line-height: 1.5;
-  box-shadow: 0 4px 20px var(--shadow);
-  display: none;
-  z-index: 300;
-  animation: bubble-in 0.25s ease both;
-}
-#hamish-bubble.visible { display: block; }
-@keyframes bubble-in {
-  from { opacity: 0; transform: translateY(8px) scale(0.95); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
-}
+patxiSvg.addEventListener('click', mostrarFrase);
+
+// Saludo inicial
+setTimeout(mostrarFrase, 1500);
+</script>
+
 
 /* ════════════════════════════════════
    MENÚ PRINCIPAL
