@@ -26,14 +26,21 @@
 <body>
 
     <section id="scr-splash" class="screen active items-center justify-center p-6 text-center overflow-hidden">
-        <div class="flex-grow flex items-center justify-center w-full">
-            <img src="personaje-standby.png" class="w-auto h-3/5 max-h-[60vh] character-float floating-img object-contain">
-        </div>
-        <div class="w-full max-w-xs mb-10 z-10">
-            <h1 class="text-4xl font-black mb-8 text-slate-800 tracking-tight">Euskera Ikaslea</h1>
-            <button onclick="showScreen('scr-modules')" class="btn-green w-full uppercase animate__animated animate__pulse animate__infinite">HASI IKASTEN</button>
-        </div>
-    </section>
+    <div class="flex-grow flex items-center justify-center w-full">
+        <video 
+            src="personaje-animado.mp4" 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="w-auto h-3/5 max-h-[60vh] character-float floating-img object-contain">
+        </video>
+    </div>
+    <div class="w-full max-w-xs mb-10 z-10">
+        <h1 class="text-4xl font-black mb-8 text-slate-800 tracking-tight">Euskera Ikaslea</h1>
+        <button onclick="showScreen('scr-modules')" class="btn-green w-full uppercase animate__animated animate__pulse animate__infinite">HASI IKASTEN</button>
+    </div>
+</section>
 
     <section id="scr-modules" class="screen p-6 bg-slate-100">
         <header class="flex justify-between items-center mb-8 mt-4 relative z-10">
