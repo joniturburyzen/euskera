@@ -25,7 +25,7 @@
     <section id="scr-splash" class="screen active items-center justify-center p-8 text-center">
         <img src="personaje-standby.jpg" class="w-72 h-72 character-float mb-10 drop-shadow-2xl rounded-full">
         <h1 class="text-4xl font-black mb-2 text-gray-800 tracking-tight">Euskera Ikaslea</h1>
-        <p class="text-gray-500 mb-10 font-medium italic">Ikasi euskara modu dibertigarrian!</p>
+        <p class="text-gray-500 mb-10 font-medium italic text-lg">Ikasi euskara modu dibertigarrian!</p>
         <button onclick="showScreen('scr-modules')" class="btn-green w-full max-w-xs text-lg uppercase tracking-wider">HASI IKASTEN →</button>
     </section>
 
@@ -35,10 +35,7 @@
                 <h1 class="text-3xl font-black text-gray-900">Moduluak</h1>
                 <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">Zure aurrerapena</p>
             </div>
-            <div class="relative">
-                <img src="personaje-mini.png" onclick="openMentor()" class="w-16 h-16 rounded-full border-4 border-white shadow-xl cursor-pointer hover:rotate-6 transition-transform">
-                <div class="absolute -top-1 -right-1 bg-red-500 w-4 h-4 rounded-full border-2 border-white"></div>
-            </div>
+            <img src="personaje-mini.png" onclick="openMentor()" class="w-16 h-16 rounded-full border-4 border-white shadow-xl cursor-pointer hover:rotate-6 transition-transform">
         </header>
         <div id="module-list" class="grid gap-4 overflow-y-auto pb-10">
             </div>
@@ -64,17 +61,17 @@
         <div class="bg-white w-full max-w-md rounded-[2.5rem] p-8 shadow-2xl animate__animated animate__slideInUp">
             <div class="flex items-center gap-4 mb-6">
                 <img src="personaje-mini.png" class="w-12 h-12 rounded-full border-2 border-green-600">
-                <h3 class="text-2xl font-bold text-gray-900">Itzuli Mentorea</h3>
+                <h3 class="text-2xl font-bold text-gray-900 text-center w-full">Itzuli Mentorea</h3>
             </div>
             <input type="text" id="mentor-query" class="w-full bg-gray-50 p-5 rounded-2xl mb-4 outline-none border-2 border-gray-100 focus:border-green-600 transition-all text-lg" placeholder="Zer itzuli nahi duzu?">
             <button onclick="askMentor()" class="btn-green w-full py-4 text-lg">GALDETU</button>
-            <div id="mentor-resp" class="mt-6 text-gray-700 leading-relaxed italic border-t border-dashed pt-6 hidden animate__animated animate__fadeIn"></div>
-            <button onclick="closeMentor()" class="mt-6 text-gray-400 w-full text-center font-bold hover:text-gray-600">ITXI</button>
+            <div id="mentor-resp" class="mt-6 text-gray-700 leading-relaxed italic border-t border-dashed pt-6 hidden animate__animated animate__fadeIn text-center"></div>
+            <button onclick="closeMentor()" class="mt-6 text-gray-400 w-full text-center font-bold hover:text-gray-600 uppercase text-xs tracking-widest">ITXI</button>
         </div>
     </div>
 
     <script>
-        // CONFIGURACIÓN FINAL INYECTADA
+        // CONFIGURACIÓN REAL INTEGRADA
         const SUPABASE_URL = 'https://ajfifipbzuzyhjsxujvd.supabase.co';
         const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFqZmlmaXBienV6eWhqc3h1anZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzEyODAyMzIsImV4cCI6MjA4Njg1NjIzMn0.ahwlw5yN-M_8wLu39FXJr7WQeKHIJeWpL4IJdTtShqM';
         const WORKER_URL = 'https://empty-silence-364e.joniturbu.workers.dev/'; 
