@@ -5,124 +5,143 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Euskera Ikaslea</title>
     
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#2E7D32">
-    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="apple-touch-icon" href="./icon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
-        body { font-family: 'Nunito', sans-serif; background-color: #f8fafc; margin: 0; }
+        /* CSS estándar (Sin @apply) */
+        body { margin: 0; background-color: #f8fafc; font-family: sans-serif; }
         .screen { display: none; min-height: 100vh; width: 100%; flex-direction: column; }
         .screen.active { display: flex !important; }
         .character-float { animation: float 3s ease-in-out infinite; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
     </style>
 </head>
 <body>
 
-    <section id="scr-splash" class="screen active flex flex-col items-center justify-between p-8 text-center h-screen overflow-hidden">
-        <div class="flex-grow flex items-center justify-center w-full">
-            <img src="personaje-standby.png" class="w-auto h-auto max-h-[50vh] object-contain character-float">
+    <section id="scr-splash" class="screen active flex flex-col items-center justify-between p-10 text-center">
+        <div class="flex-grow flex items-center justify-center">
+            <img src="./personaje-standby.png" class="w-auto h-auto max-h-[45vh] object-contain character-float" alt="Aitona">
         </div>
-        <div class="w-full max-w-xs mb-10">
-            <h1 class="text-4xl font-black mb-8 text-slate-800">Euskera <span class="text-green-600">Ikaslea</span></h1>
-            <button onclick="showScreen('scr-modules')" class="w-full bg-green-600 text-white font-bold py-5 rounded-2xl shadow-lg uppercase">HASI IKASTEN</button>
+        <div class="w-full max-w-xs mx-auto mb-10">
+            <h1 class="text-4xl font-extrabold mb-8 text-slate-800">Euskera <span class="text-green-600">Ikaslea</span></h1>
+            <button onclick="showScreen('scr-modules')" 
+                class="w-full bg-green-600 text-white font-bold py-5 rounded-2xl shadow-lg active:translate-y-1 transition-all uppercase">
+                HASI IKASTEN
+            </button>
         </div>
     </section>
 
     <section id="scr-modules" class="screen p-6 bg-slate-50">
-        <button onclick="showScreen('scr-splash')" class="text-slate-400 text-3xl font-bold self-start">←</button>
-        <h2 class="text-2xl font-black my-6 text-slate-800">Aukeratu bat:</h2>
-        <div class="grid gap-4">
+        <button onclick="showScreen('scr-splash')" class="text-slate-400 text-2xl font-bold self-start p-2">← Atzera</button>
+        <h2 class="text-3xl font-black my-8 text-slate-800 text-center">Aukeratu</h2>
+        
+        <div class="grid gap-4 w-full max-w-sm mx-auto">
             <div onclick="startQuiz()" class="bg-white p-6 rounded-3xl shadow-sm border-2 border-slate-100 flex items-center cursor-pointer active:scale-95 transition-all">
-                <div class="text-4xl mr-4">📝</div>
-                <div class="text-left"><h3 class="font-bold text-lg text-slate-800">Autoebaluazioa</h3><p class="text-slate-500 text-sm">Practica lo aprendido</p></div>
+                <span class="text-4xl mr-4">📝</span>
+                <div class="text-left">
+                    <h3 class="font-bold text-lg text-slate-800">Autoebaluazioa</h3>
+                    <p class="text-slate-500 text-sm">Pon a prueba tu euskera</p>
+                </div>
             </div>
             <div onclick="showScreen('scr-dictionary')" class="bg-white p-6 rounded-3xl shadow-sm border-2 border-slate-100 flex items-center cursor-pointer active:scale-95 transition-all">
-                <div class="text-4xl mr-4">👴</div>
-                <div class="text-left"><h3 class="font-bold text-lg text-slate-800">Diccionario Aitona</h3><p class="text-slate-500 text-sm">Pregúntale al mentor</p></div>
+                <span class="text-4xl mr-4">👴</span>
+                <div class="text-left">
+                    <h3 class="font-bold text-lg text-slate-800">Aitona Mentor</h3>
+                    <p class="text-slate-500 text-sm">Pregúntale lo que quieras</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="scr-quiz" class="screen p-6 bg-white">
         <div class="flex justify-between items-center mb-6">
-            <button onclick="showScreen('scr-modules')" class="text-slate-400 text-2xl font-bold">✕</button>
-            <span id="quiz-progress" class="font-bold text-green-600">Galdera 1/2</span>
+            <button onclick="showScreen('scr-modules')" class="text-slate-400 text-3xl font-bold">✕</button>
+            <span id="quiz-progress" class="font-bold text-green-600">1/2</span>
         </div>
         <div class="text-center mb-6 h-48 flex items-center justify-center">
-            <img id="quiz-character" src="personaje-standby.png" class="h-full w-auto object-contain character-float">
+            <img id="quiz-character" src="./personaje-standby.png" class="h-full w-auto object-contain character-float">
         </div>
-        <div id="quiz-content" class="text-center">
-            <h2 id="quiz-question" class="text-2xl font-black text-slate-800 mb-8 px-4">...</h2>
-            <div id="quiz-options" class="w-full px-2"></div>
+        <div class="text-center px-4">
+            <h2 id="quiz-question" class="text-2xl font-black text-slate-800 mb-8">...</h2>
+            <div id="quiz-options" class="w-full"></div>
         </div>
     </section>
 
     <section id="scr-dictionary" class="screen p-6 bg-slate-50">
         <button onclick="showScreen('scr-modules')" class="text-slate-400 text-3xl font-bold self-start">←</button>
         <div class="bg-white rounded-3xl p-6 shadow-xl my-6 text-center">
-            <img src="personaje-mini.png" class="h-32 mx-auto mb-4 character-float">
-            <p class="text-slate-500 italic mb-4">"¿Qué quieres traducir, txapeldun?"</p>
-            <input id="mentor-query" type="text" class="w-full p-4 rounded-xl border-2 border-slate-100 mb-4 outline-none focus:border-green-500 text-lg">
+            <img src="./personaje-mini.png" class="h-32 mx-auto mb-4 character-float">
+            <input id="mentor-query" type="text" placeholder="Escribe algo..." 
+                class="w-full p-4 rounded-xl border-2 border-slate-200 mb-4 outline-none focus:border-green-500 text-lg">
             <button onclick="askMentor()" class="w-full bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg">PREGUNTAR</button>
         </div>
-        <div id="mentor-resp-container" class="hidden bg-green-50 p-6 rounded-3xl border-2 border-green-100 animate__animated animate__fadeInUp">
+        <div id="mentor-resp-container" class="hidden bg-green-50 p-6 rounded-3xl border-2 border-green-100">
             <p id="mentor-resp" class="text-slate-800 font-medium"></p>
         </div>
     </section>
 
     <script>
+        // 1. NAVEGACIÓN (SIMPLE Y ROBUSTA)
         function showScreen(id) {
-            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            window.scrollTo(0,0);
+            const screens = document.querySelectorAll('.screen');
+            screens.forEach(s => s.classList.remove('active'));
+            const target = document.getElementById(id);
+            if(target) target.classList.add('active');
+            window.scrollTo(0, 0);
         }
 
-        // LÓGICA DEL QUIZ
-        const testData = [
-            { q: "¿Cómo se dice 'Gracias'?", options: ["Agur", "Eskerrik asko", "Kaixo"], correct: 1 },
-            { q: "¿Qué significa 'Gaua'?", options: ["Día", "Tarde", "Noche"], correct: 2 }
+        // 2. LÓGICA DEL QUIZ (CON IMÁGENES)
+        const quizData = [
+            { q: "¿Cómo se dice 'Hola'?", opt: ["Agur", "Kaixo", "Bai"], correct: 1 },
+            { q: "¿Qué es 'Etxea'?", opt: ["Coche", "Perro", "Casa"], correct: 2 }
         ];
-        let currentQ = 0;
+        let currentIdx = 0;
 
-        function startQuiz() { currentQ = 0; showScreen('scr-quiz'); loadQ(); }
+        function startQuiz() {
+            currentIdx = 0;
+            showScreen('scr-quiz');
+            loadQuestion();
+        }
 
-        function loadQ() {
+        function loadQuestion() {
             const char = document.getElementById('quiz-character');
-            char.src = "personaje-standby.png";
-            const data = testData[currentQ];
+            char.src = "./personaje-standby.png";
+            const data = quizData[currentIdx];
             document.getElementById('quiz-question').innerText = data.q;
-            document.getElementById('quiz-progress').innerText = `Galdera ${currentQ + 1}/${testData.length}`;
+            document.getElementById('quiz-progress').innerText = `${currentIdx + 1}/${quizData.length}`;
             const container = document.getElementById('quiz-options');
             container.innerHTML = '';
-            data.options.forEach((opt, i) => {
-                const btn = document.createElement('button');
-                btn.className = "w-full p-4 mb-3 text-left rounded-2xl border-2 border-slate-100 bg-white font-bold text-slate-700 active:bg-slate-50 transition-all";
-                btn.innerText = opt;
-                btn.onclick = () => check(i);
-                container.appendChild(btn);
+            data.opt.forEach((o, i) => {
+                const b = document.createElement('button');
+                b.className = "w-full p-4 mb-3 text-center rounded-2xl border-2 border-slate-200 bg-white font-bold text-slate-700 active:bg-slate-100 transition-all";
+                b.innerText = o;
+                b.onclick = () => check(i);
+                container.appendChild(b);
             });
         }
 
         function check(i) {
             const char = document.getElementById('quiz-character');
-            if(i === testData[currentQ].correct) {
-                char.src = "personaje-acierto.png";
+            if(i === quizData[currentIdx].correct) {
+                char.src = "./personaje-acierto.png";
             } else {
-                char.src = "personaje-fallo.png";
+                char.src = "./personaje-fallo.png";
             }
             setTimeout(() => {
-                currentQ++;
-                if(currentQ < testData.length) loadQ();
-                else { alert("¡Examen terminado!"); showScreen('scr-modules'); }
+                currentIdx++;
+                if(currentIdx < quizData.length) loadQuestion();
+                else { alert("¡Terminado!"); showScreen('scr-modules'); }
             }, 1500);
         }
 
-        // LÓGICA DICCIONARIO
+        // 3. DICCIONARIO
         async function askMentor() {
             const q = document.getElementById('mentor-query').value.trim();
             if(!q) return;
@@ -136,7 +155,7 @@
                     body: JSON.stringify({ query: q })
                 });
                 const data = await res.json();
-                resp.innerText = data.texto || "Barkatu...";
+                resp.innerText = data.texto || "Barkatu, ez dut ulertu.";
             } catch(e) { resp.innerText = "Error de conexión."; }
         }
     </script>
