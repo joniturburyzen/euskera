@@ -1,7 +1,6 @@
 {
   "name": "Euskera Ikaslea",
   "short_name": "Euskera",
-  "description": "Aprende euskera con tu mentor de Bilbao",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f8fafc",
@@ -10,8 +9,7 @@
     {
       "src": "./icon.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
