@@ -1,0 +1,81 @@
+modulo_id,enunciado,opciones,respuesta_correcta
+1,"¿Cómo se dice 'Yo soy Mikel' en euskera?","[""Ni Mikel naiz"",""Ni Mikel da"",""Ni Mikel gara""]",0
+1,"¿Cuál es la forma correcta de 'Nosotros somos estudiantes'?","[""Gu ikasleak zarete"",""Gu ikasleak gara"",""Gu ikasleak dira""]",1
+1,"¿Cómo se pregunta '¿Cómo se llama usted?' en euskera?","[""Nor da hura?"",""Nola duzu izena?"",""Zer da zure lanbidea?""]",1
+1,"¿Qué significa 'Hura ez da medikua'?","[""Él es médico"",""Él no es médico"",""Ella quiere ser médica""]",1
+1,"¿Cómo se dice 'Soy de Donostia' en euskera?","[""Ni Donostian naiz"",""Ni Donostiakoa naiz"",""Ni Donostia naiz""]",1
+1,"¿Cuál es la conjugación correcta de IZAN para 'Ellos/Ellas son'?","[""Haiek zarete"",""Haiek gara"",""Haiek dira""]",2
+1,"¿Qué significa 'abizena' en castellano?","[""Edad"",""Apellido"",""Profesión""]",1
+1,"¿Cómo se forma la negación en euskera?","[""Se pone EZ delante del verbo"",""Se pone EZ al final de la frase"",""Se añade -EZ al verbo""]",0
+1,"¿Qué sufijo indica procedencia en euskera?","[""-TIK"",""-KOA"",""-RA""]",1
+1,"¿Cómo se dice 'Tengo treinta años' en euskera?","[""Ni hogeita hamar urte naiz"",""Ni hogeita hamar urte ditut"",""Ni hogeita hamar urtea da""]",1
+2,"¿Cuál es la diferencia principal entre los verbos NOR y NOR-NORK?","[""NOR son transitivos y NOR-NORK intransitivos"",""NOR son intransitivos (usan IZAN) y NOR-NORK son transitivos (usan UKAN)"",""No hay diferencia, se usan igual""]",1
+2,"¿Cómo se dice 'Yo como pan' en euskera?","[""Nik ogia jaten dut"",""Nik ogia jan naiz"",""Nik ogia jaten naiz""]",0
+2,"¿Dónde va el verbo en la frase vasca?","[""Al principio"",""En el medio"",""Al final""]",2
+2,"¿Cuál es la forma correcta de 'Ellos leen el libro'?","[""Haiek liburua irakurtzen dute"",""Haiek liburua irakurtzen dugu"",""Haiek liburua irakurri dira""]",0
+2,"¿Qué significa 'Gauean lo egiten naiz'?","[""Por la noche trabajo"",""Por la noche duermo"",""Por la noche como""]",1
+2,"¿Cómo se forma el presente habitual en euskera?","[""Raíz + -TU + auxiliar"",""Raíz + -T(Z)EN + auxiliar"",""Raíz + -KO + auxiliar""]",1
+2,"¿Qué día de la semana es 'Ostirala'?","[""Jueves"",""Viernes"",""Sábado""]",1
+2,"¿Cuál es la forma correcta de 'Nosotros bebemos agua'?","[""Guk ura edaten dugu"",""Guk ura edaten dute"",""Guk ura edaten gara""]",0
+2,"¿Por qué 'lo egin' (dormir) usa IZAN y no UKAN como auxiliar?","[""Porque es un verbo irregular"",""Porque es un verbo intransitivo (NOR)"",""Porque es un verbo reflexivo""]",1
+2,"¿Qué significa 'Egunero lan egiten dut'?","[""Todos los días estudio"",""Todos los días trabajo"",""Todos los días descanso""]",1
+3,"¿Qué sufijo se usa para indicar 'en/dentro de' (ubicación) en euskera?","[""-(E)RA"",""-(E)AN"",""-(E)TIK""]",1
+3,"¿Cómo se dice 'a la escuela' (dirección) en euskera?","[""Eskolan"",""Eskolara"",""Eskolatik""]",1
+3,"¿Qué significa 'Bilbotik etortzen naiz'?","[""Voy a Bilbao"",""Estoy en Bilbao"",""Vengo de Bilbao""]",2
+3,"¿Cuál es la traducción correcta de 'Entro en la tienda'?","[""Dendatik sartzen naiz"",""Dendara sartzen naiz"",""Dendan sartzen naiz""]",1
+3,"¿Qué significa 'Jatetxea'?","[""La biblioteca"",""El restaurante"",""El hospital""]",1
+3,"¿Cómo se dice 'Salgo de casa' en euskera?","[""Etxera irteten naiz"",""Etxean irteten naiz"",""Etxetik irteten naiz""]",2
+3,"¿Qué diferencia hay entre -RANTZ y -RA?","[""-RANTZ indica dirección aproximada (hacia)"",""-RA indica destino concreto (a)"",""No hay diferencia, son sinónimos""]",0
+3,"¿Cómo se dice 'en Donostia'?","[""Donostiara"",""Donostiatik"",""Donostian""]",2
+3,"¿Qué significa 'Liburutegia'?","[""La librería"",""La biblioteca"",""El libro""]",1
+3,"¿Cuál es la traducción correcta de 'Voy al parque desde la estación'?","[""Geltokitik parkera joaten naiz"",""Geltokira parketik joaten naiz"",""Geltokian parkean joaten naiz""]",0
+4,"¿Cómo se dice 'A mí me gusta la música' en euskera?","[""Nik musika gustatzen dut"",""Niri musika gustatzen zait"",""Ni musika gustatzen naiz""]",1
+4,"¿Cuál es el sufijo del caso dativo en euskera?","[""-RA"",""-TIK"",""-RI""]",2
+4,"¿Qué forma verbal se usa cuando a alguien le gustan varias cosas (plural)?","[""Zait"",""Zaizkit"",""Dut""]",1
+4,"¿Cómo se dice 'A ellos les gusta el fútbol'?","[""Haiek futbola gustatzen dute"",""Haiei futbola gustatzen zaie"",""Haiek futbola gustatzen dira""]",1
+4,"¿Qué significa 'Nire ustez, filma interesgarria da'?","[""En mi opinión, la película es interesante"",""Me gusta la película interesante"",""La película me interesa mucho""]",0
+4,"¿Cuál es la traducción de 'Estoy de acuerdo'?","[""Ez nago ados"",""Ados nago"",""Ondo iruditzen zait""]",1
+4,"¿Qué significa 'Zaila' en castellano?","[""Fácil"",""Difícil"",""Aburrido""]",1
+4,"¿Cómo se dice '¿A usted qué le gusta?'?","[""Zuk zer gustatzen duzu?"",""Zuri zer gustatzen zaizu?"",""Zu zer gustatzen zara?""]",1
+4,"¿Por qué 'gustatu' no usa UKAN (dut, duzu...) como auxiliar?","[""Porque es irregular"",""Porque usa la estructura NOR-NORI: lo que gusta (NOR) + a quién (NORI)"",""Porque es un verbo intransitivo simple""]",1
+4,"¿Cuál es la traducción de 'A nosotros nos gusta ir al monte'?","[""Gu mendira joaten gara"",""Guri mendira joatea gustatzen zaigu"",""Guk mendira joatea gustatzen dugu""]",1
+5,"¿Cuál es la forma pasada de 'Ni naiz' (Yo soy)?","[""Ni nintzen"",""Ni nuen"",""Ni ginen""]",0
+5,"¿Cómo se dice 'Ayer fui al cine' en euskera?","[""Atzo zinera joaten naiz"",""Atzo zinera joan nintzen"",""Atzo zineman nintzen""]",1
+5,"¿Cuál es la diferencia entre 'Joan naiz' y 'Joan nintzen'?","[""No hay diferencia"",""'Joan naiz' es pasado reciente (he ido) y 'Joan nintzen' es pasado remoto (fui)"",""'Joan naiz' es futuro y 'Joan nintzen' es pasado""]",1
+5,"¿Cómo se dice 'Ellos leyeron el libro' en euskera?","[""Haiek liburua irakurri zuten"",""Haiek liburua irakurtzen ziren"",""Haiek liburua irakurri dute""]",0
+5,"¿Qué significa 'Iaz'?","[""Mañana"",""El año pasado"",""Anteayer""]",1
+5,"¿Cómo se forma el pasado habitual (solía hacer)?","[""Participio + auxiliar pasado"",""Raíz + -T(Z)EN + auxiliar pasado"",""Raíz + -KO + auxiliar pasado""]",1
+5,"¿Cuál es la traducción de 'Kafea hartzen nuen'?","[""Tomo café"",""Yo solía tomar café"",""Tomaré café""]",1
+5,"¿Cómo se dice 'La semana pasada' en euskera?","[""Datorren astean"",""Joan den astean"",""Aste honetan""]",1
+5,"¿Cuál es la forma correcta de 'Nosotros estuvimos en Bilbao'?","[""Gu Bilbon egon ginen"",""Gu Bilbon egon gara"",""Gu Bilbora joan ginen""]",0
+5,"¿Qué significa 'Duela bi urte euskara ikasten hasi nintzen'?","[""Dentro de dos años empezaré a aprender euskera"",""Hace dos años empecé a aprender euskera"",""Hace dos años dejé de aprender euskera""]",1
+6,"¿Cómo se dice 'Iré' (yo iré) en euskera?","[""Joan nintzen"",""Joango naiz"",""Joaten naiz""]",1
+6,"¿Cuándo se usa el sufijo -GO en lugar de -KO para el futuro?","[""Siempre con verbos transitivos"",""Cuando el participio termina en -N"",""Cuando el sujeto es plural""]",1
+6,"¿Cómo se dice 'Tengo que trabajar' en euskera?","[""Lan egingo dut"",""Lan egin nahi dut"",""Lan egin behar dut""]",2
+6,"¿Qué significa 'Bihar' en castellano?","[""Ayer"",""Mañana"",""Hoy""]",1
+6,"¿Cuál es la traducción de 'Joan nahi dut'?","[""Tengo que ir"",""Quiero ir"",""Voy a ir""]",1
+6,"¿Cómo se forma una condición real (posible) en euskera?","[""Baldin + ba- unido al auxiliar"",""EZ + auxiliar + condicional"",""-(E)KO + auxiliar pasado""]",0
+6,"¿Qué significa 'Dirua izango banu, etxe berria erosiko nuke'?","[""Cuando tenga dinero, compraré una casa nueva"",""Si tuviera dinero, compraría una casa nueva"",""Tengo dinero y compro una casa nueva""]",1
+6,"¿Cuál es la forma correcta de 'Nosotros haríamos'?","[""Guk egingo genuen"",""Guk egingo genuke"",""Guk egingo ginen""]",1
+6,"¿Qué significa 'Datorren astean'?","[""La semana pasada"",""Esta semana"",""La próxima semana""]",2
+6,"¿Cómo se dice 'Si hace buen tiempo, iremos al monte'?","[""Eguraldia ona bada"",""mendira joango gara"",""Eguraldia ona zenuen""]",0
+7,"Zer esan nahi du 'Gu ikasleak gara'?","[""Ellos son estudiantes"",""Nosotros somos estudiantes"",""Vosotros sois estudiantes""]",1
+7,"'Niri musika gustatzen zait'. Zer da 'niri' esaldian?","[""Sujeto (NOR)"",""Dativo (NORI)"",""Complemento directo (NORK)""]",1
+7,"Nola esaten da 'Ayer fui a Bilbao' euskaraz?","[""Atzo Bilbora joan nintzen"",""Atzo Bilbon joaten naiz"",""Atzo Bilbotik joango naiz""]",0
+7,"Zer esan nahi du 'Bihar'?","[""Ayer"",""Hoy"",""Mañana""]",2
+7,"'Kafea hartzen dut' eta 'Kafea hartu dut'. Zein da aldea?","[""'Hartzen dut' es habitual"",""'hartu dut' es pasado reciente"",""No hay diferencia""]",0
+7,"Zer da 'Jatetxea' gaztelaniaz?","[""La casa"",""El restaurante"",""La tienda""]",1
+7,"Nola osatzen da esaldi hau: 'Eguraldia ona _____, mendira joango gara'?","[""bada"",""bazen"",""balitz""]",0
+7,"Zer esan nahi du 'Beraz'?","[""Además"",""Sin embargo"",""Por lo tanto""]",2
+7,"'Nik liburua irakurriko dut'. Zein denbora da?","[""Pasado"",""Presente"",""Futuro""]",2
+7,"Nola esaten da 'Quiero comer' euskaraz?","[""Jan behar dut"",""Jan nahi dut"",""Jango naiz""]",1
+8,"Zer esan nahi du 'Ez naiz etorri gaixorik nengoelako'?","[""No he venido porque estaba enfermo/a"",""He venido aunque estaba enfermo/a"",""No vendré porque estoy enfermo/a""]",0
+8,"'Eskolara noa ikasteko'. Zer adierazten du '-TZEKO'?","[""Causa (porque)"",""Finalidad (para)"",""Tiempo (cuando)""]",1
+8,"Nola esaten da 'Muchas gracias' euskaraz?","[""Mesedez"",""Ez horregatik"",""Eskerrik asko""]",2
+8,"Zer esan nahi du 'Txikia nintzenean, Bilbon bizi nintzen'?","[""Cuando era pequeño/a, vivía en Bilbao"",""Cuando sea mayor, viviré en Bilbao"",""Si fuera pequeño/a, viviría en Bilbao""]",0
+8,"Nola esaten da 'No entiendo' euskaraz?","[""Ulertzen dut"",""Ez dut ulertzen"",""Ulertuko dut""]",1
+8,"Zer da '-ARREN' atzizkiaren esanahia?","[""Porque"",""Para"",""Aunque""]",2
+8,"'Dirua behar dut bidaiatzeko'. Zer esan nahi du?","[""Tengo dinero para viajar"",""Necesito dinero para viajar"",""Quiero dinero del viaje""]",1
+8,"Nola esaten da '¿Puede repetir, por favor?'?","[""Poliki-poliki, mesedez"",""Errepika dezakezu, mesedez?"",""Ulertzen duzu, mesedez?""]",1
+8,"'Zaila den arren, saiatzen naiz'. Zer esan nahi du?","[""Es difícil, por eso no lo intento"",""Aunque es difícil, lo intento"",""Porque es difícil, lo intento""]",1
+8,"Nola esaten da '¡Hasta luego!' euskaraz?","[""Bihar arte!"",""Agur!"",""Gero arte!""]",2
