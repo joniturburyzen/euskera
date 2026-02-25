@@ -171,26 +171,47 @@
 
         // Lógica del Diccionario usando tu Worker (Fallo 5 corregido)
         async function askMentor() {
-            const query = document.getElementById('mentor-query').value.trim();
-            if(!query) return;
-            const container = document.getElementById('mentor-resp-container');
-            const loading = document.getElementById('mentor-loading');
-            const resp = document.getElementById('mentor-resp');
-            
-            container.classList.remove('hidden'); loading.classList.remove('hidden'); resp.classList.add('hidden');
+    const queryInput = document.getElementById('mentor-query');
+    const query = queryInput.value.trim();
+    if(!query) return;
 
-            try {
-                const response = await fetch(WORKER_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ query: query })
-                });
-                const data = await response.json();
-                loading.classList.add('hidden'); resp.innerText = data.texto; resp.classList.remove('hidden');
-            } catch(e) {
-                loading.classList.add('hidden'); resp.innerText = "Error en el diccionario."; resp.classList.remove('hidden');
-            }
+    const container = document.getElementById('mentor-resp-container');
+    const loading = document.getElementById('mentor-loading');
+    const resp = document.getElementById('mentor-resp');
+    
+    // UI: Mostrar que estamos trabajando
+    container.classList.remove('hidden');
+    loading.classList.remove('hidden');
+    resp.classList.add('hidden');
+
+    try {
+        // LLAMADA AL WORKER (Asegúrate de que la URL sea la tuya)
+        const response = await fetch('https://empty-silence-364e.joniturbu.workers.dev', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: query }) // Enviamos 'query' como espera el Worker
+        });
+
+        if(!response.ok) throw new Error(`Error en el servidor: ${response.status}`);
+
+        const data = await response.json();
+
+        // IMPORTANTE: Leemos 'data.texto' porque así lo envía tu Worker
+        if (data.texto) {
+            loading.classList.add('hidden');
+            resp.innerText = data.texto;
+            resp.classList.remove('hidden');
+        } else {
+            throw new Error("Respuesta vacía del mentor");
         }
+
+    } catch(e) {
+        console.error("Fallo en el Mentor:", e);
+        loading.classList.add('hidden');
+        resp.innerText = "¡Ay va! " + e.message + ". Revisa que el Worker tenga la API Key en Settings.";
+        resp.classList.remove('hidden');
+    }
+}
 
         function openMentor() { document.getElementById('mentor-modal').style.display = 'flex'; document.getElementById('mentor-query').focus(); }
         function closeMentor() { document.getElementById('mentor-modal').style.display = 'none'; }
