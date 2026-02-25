@@ -113,11 +113,20 @@
         const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
         let currentIdx = 0, currentQs = [], currentModuleId = null;
 
-        function showScreen(id) {
-            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
-            document.getElementById(id).classList.add('active');
-            if(id === 'scr-modules') loadModules();
-        }
+        function showScreen(screenId) {
+    // Ocultamos todas
+    document.querySelectorAll('.screen').forEach(s => {
+        s.classList.remove('active');
+        s.style.display = 'none';
+    });
+    // Mostramos la que queremos
+    const target = document.getElementById(screenId);
+    if(target) {
+        target.classList.add('active');
+        target.style.display = 'flex';
+        window.scrollTo(0,0);
+    }
+}
 
         async function loadModules() {
             const { data, error } = await client.from('modulos').select('*').order('orden');
